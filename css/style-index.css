@@ -1,1 +1,22 @@
 /*css*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+div{
+    border: solid black 5px;
+    background-color: white;
+    width: 100%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+header li{
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+}
