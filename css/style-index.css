@@ -1,9 +1,13 @@
 /*css*/
+body{
+    margin:0px;
+}
 .container{
     display:flex;
     flex-wrap:wrap;
     width:100%;
     justify-content: center;
+    padding:0px;
 }
 
 div{
@@ -22,6 +26,8 @@ header{
     flex-direction:row;
     width:100%;
     background-color:rgb(182, 181, 255);
+    height:100px;
+    margin:0px;
 }
 
 header ul{
@@ -46,7 +52,7 @@ li a{
 
 .logo-img {
     border-radius: 50%;
-    height:110px;
+    height:90px;
 }
 
 .logo li{
@@ -54,7 +60,7 @@ li a{
 }
 
 .banner{
-    width:90%;
+    width:1200px;
     height:500px;
     margin:15px 0px 30px 0px;
 }
@@ -76,7 +82,7 @@ li a{
 
 .listas{
     margin: 50px 0px;
-    width:90%;
+    width:1200px;
     border:solid white;
     border-width:5px;
     height:700px;
@@ -88,16 +94,16 @@ li a{
 
 .songs{
     border:solid white;
-    width:30%;
+    width:300px;
 }
 
 .albums{
     border:solid white;
-    width:25%;
+    width:300px;
 }
 
 .artists{
     border:solid white;
-    width:30%;
+    width:300px;
 
 }
