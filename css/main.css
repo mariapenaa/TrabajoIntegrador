@@ -1,6 +1,11 @@
 /*css*/
 body{
-    background-image: url(../img/bkg-img.png);
-    background-repeat: repeat-x;
+   /* background-image: url(../img/bkg-img.png);
+    background-repeat: repeat-x;*/
+    background-color: rgb(27, 3, 46);
 }
 
+a{
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+}

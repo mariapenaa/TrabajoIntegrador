@@ -24,25 +24,29 @@ div{
 header{
     display:flex;
     flex-direction:row;
+    justify-content: center;
     width:100%;
-    background-color:rgb(182, 181, 255);
+    background-color:#D83F87;
     height:100px;
     margin:0px;
 }
 
 header ul{
     display:flex;
-    width:100%;
+    width:1200px;
     padding:0px;
     align-items:center;
-    justify-content: space-between;
+    justify-content:flex-end;
+  
 }
 
 header li{
     text-decoration:none;
     list-style:none;
     display:inline;
-    margin:10px 50px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left:150px;
 }
 
 li a{
@@ -55,8 +59,9 @@ li a{
     height:90px;
 }
 
-.logo li{
-    margin:0px;
+li .logo-img{
+    margin-left:0px;
+    margin-right:500px;
 }
 
 .banner{
