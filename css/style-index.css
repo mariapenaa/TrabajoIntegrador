@@ -45,7 +45,7 @@ header li{
     list-style:none;
     display:inline;
     margin-top:10px;
-    margin-bottom: 10px;
+    margin-bottom:10px;
     margin-left:150px;
 }
 
@@ -116,3 +116,20 @@ div .listas{
 
 }
 /* footer */
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    background-color:#D83F87 ;
+    height: 100px;
+}
+.deezer{
+   border-radius: 50%;
+   height: 90px;
+    margin-left:0px;
+    margin-right:900px;
+    justify-content: flex-end;}
+.nombres li{
+    display: inline;
+}
