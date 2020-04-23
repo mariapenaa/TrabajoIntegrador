@@ -115,6 +115,7 @@ div .listas{
     width:300px;
 
 }
+
 /* footer */
 footer{
     display: flex;
@@ -129,7 +130,11 @@ footer{
    height: 90px;
     margin-left:0px;
     margin-right:900px;
-    justify-content: flex-end;}
+    justify-content: flex-end;
+}
+
 .nombres li{
     display: inline;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
