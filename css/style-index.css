@@ -74,30 +74,60 @@ li .logo-img{
 .banner{
     padding-top:110px;
     width:1200px;
-    height:500px;
+    height:700px;
+    box-sizing: border-box;
     margin:15px 0px 30px 0px;
 }
 
 .buscador{
     border:solid white;
-    border-width:5px;
     width:100%;
     height:50px;
+    background-color: #A4B3B6;
+}
+
+.fa-search{
+    color:white;
+    font-size:30px;
+    margin:9px 15px;
 }
 
 .minibanner{
+    display:grid;
+    grid-template-columns: 300px 1fr;
     border:solid white;
-    border-width:5px;
+    border-width:3px;
     width:100%;
-    height:450px;
+    height:550px;
     margin-top:30px;
+    margin-bottom:60px;
 }
 
+.minibanner img{
+    width:100%;
+}
+
+.banner-title{
+    display:grid;
+    grid-template-rows: 0.5fr 1fr;
+}
+
+.title1{
+    font-size:150px;
+    font-family: 'Anton', sans-serif;
+    text-transform:uppercase;
+}
+
+.title2{
+    font-family: 'Kaushan Script', cursive;
+    font-size:110px;
+}
 
 /* top 50 lists */
 div .listas{
     width: 1200px;
     padding: 0px;
+    
 }
 .listas{
     margin: 50px 0px;
@@ -106,23 +136,32 @@ div .listas{
     display:flex;
     flex-wrap:nowrap;
     padding:20px;
-    justify-content: space-around;
+    justify-content: space-between;
+    
 }
 
 .songs{
     border:solid white;
-    width:300px;
+    width:350px;
+    background-color:#A4B3B6;
 }
 
 .albums{
     border:solid white;
-    width:300px;
+    width:350px;
+    background-color:#A4B3B6;
 }
 
 .artists{
     border:solid white;
-    width:300px;
+    width:350px;
+    background-color:#A4B3B6;
 
+}
+
+ul{
+    list-style: none;
+    padding:0px;
 }
 
 /* footer */
@@ -134,12 +173,14 @@ footer{
     background-color:#D83F87 ;
     height: 100px;
     padding:10px;
+    flex-wrap: nowrap;
+    flex: row;
 }
 .deezer{
    border-radius: 50%;
    height: 90px;
     margin-left:0px;
-    margin-right:900px;
+    margin-right:30px;
     justify-content: flex-end;
 }
 .nombres{
@@ -153,3 +194,24 @@ footer{
     font-family: 'Montserrat', sans-serif;
     margin:30px;
 }
+
+#icons{
+    color:white;
+    font-size:30px;
+}
+
+ul#icons{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    align-items:center;
+    margin-right:505px;
+}
+
+#icons li{
+    margin:20px;
+}
+
+
+
