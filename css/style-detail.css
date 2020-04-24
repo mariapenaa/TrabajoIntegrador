@@ -75,5 +75,8 @@ ul{
     font-size:30px;
 }
 
-
+ol.topsongs li{
+    font-size:10px;
+    margin:0px;
+}
 
