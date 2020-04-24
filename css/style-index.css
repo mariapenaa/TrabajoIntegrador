@@ -85,6 +85,8 @@ li .logo-img{
     height:450px;
     margin-top:30px;
 }
+
+
 /* top 50 lists */
 div .listas{
     width: 1200px;
@@ -124,6 +126,7 @@ footer{
     justify-content: center;
     background-color:#D83F87 ;
     height: 100px;
+    padding:10px;
 }
 .deezer{
    border-radius: 50%;
@@ -132,9 +135,14 @@ footer{
     margin-right:900px;
     justify-content: flex-end;
 }
-
+.nombres{
+    display:flex;
+    padding-left:0px;
+    align-items:center;
+}
 .nombres li{
     display: inline;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    margin:30px;
 }
