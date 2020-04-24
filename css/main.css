@@ -16,3 +16,101 @@ div{
     border-width:2px;
     border-color:solid white;
 }
+/* header */
+
+header{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    width:100%;
+    background-color:#D83F87;
+    height:100px;
+    margin:0px;
+    position:fixed;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.6)
+
+}
+
+header ul{
+    display:flex;
+    width:1200px;
+    padding:0px;
+    align-items:center;
+    justify-content:flex-end;
+  
+}
+
+header li{
+    text-decoration:none;
+    list-style:none;
+    display:inline;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:150px;
+}
+
+li a{
+    text-decoration:none;
+    color:white;
+}
+
+.logo-img {
+    border-radius: 50%;
+    height:90px;
+}
+
+li .logo-img{
+    margin-left:0px;
+    margin-right:500px;
+}
+/* footer */
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    background-color:#D83F87 ;
+    height: 100px;
+    padding:10px;
+    flex-wrap: nowrap;
+    flex: row;
+}
+.deezer{
+   border-radius: 50%;
+   height: 90px;
+    margin-left:0px;
+    margin-right:30px;
+    justify-content: flex-end;
+}
+.nombres{
+    display:flex;
+    padding-left:0px;
+    align-items:center;
+}
+.nombres li{
+    display: inline;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin:30px;
+}
+
+#icons{
+    color:white;
+    font-size:30px;
+}
+
+ul#icons{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    align-items:center;
+    margin-right:505px;
+}
+
+#icons li{
+    margin:20px;
+}
+
+
+
