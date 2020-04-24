@@ -8,22 +8,72 @@ body{
     justify-content: center;
     padding: 0px;
 }
-.fotodetail{
-    width: 700px;
+
+.foto1{
+    width:500px;
+    height:500px;
 }
-.detail{
+
+img.fotodetail{
+    width:100%;
+}
+
+div.detail{
     display: flex;
-    flex: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border:solid #A4B3B6;
+    width:1000px;
+    height:500px;
+    margin-bottom:80px;
+
 }
 .title{
     padding-top: 110px;
-    width: 100%;
+    width: 1000px;
    display: flex;
-   justify-content: center;
    font-family: 'Anton', sans-serif;
+   text-align:right;
 }
+
 .title p{
 margin: 10px;
 font-size: 50px;
 }
+
+.fotodetailalbum{
+    width:100%;
+}
+
+/*Datos album*/
+ 
+.info{
+    padding-right:150px;
+}
+
+.nombre{
+    font-size:100px;
+    margin:20px 0px 0px 0px;
+    font-weight: bold;
+}
+
+span.datos{
+    font-size:40px;
+    color:#D83F87;
+}
+
+
+
+ul{
+    list-style:none;
+    padding-left:0px;
+}
+
+.info-list li{
+    margin:20px 0px 30px 0px;
+    color:white;
+    font-size:30px;
+}
+
+
+

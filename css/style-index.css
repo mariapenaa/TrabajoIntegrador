@@ -47,7 +47,7 @@ div{
 
 .minibanner{
     display:grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 319px 1fr;
     border:solid white;
     border-width:3px;
     width:100%;
@@ -57,23 +57,42 @@ div{
 }
 
 .minibanner img{
-    width:100%;
+    height: 100%;
+    object-fit: fill;
+ 
 }
 
 .banner-title{
     display:grid;
-    grid-template-rows: 0.5fr 1fr;
+    grid-template-rows: 220px 110px 220px;
+    height:550px;
+    background-color: rgb(129, 90, 180);
 }
 
 .title1{
+    display:flex;
+    text-align: center;
+    justify-content: center;
     font-size:150px;
     font-family: 'Anton', sans-serif;
     text-transform:uppercase;
 }
 
 .title2{
+    display:flex;
+    justify-content: center;
     font-family: 'Kaushan Script', cursive;
     font-size:110px;
+}
+
+.title3{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    font-size:150px;
+    font-family: 'Anton', sans-serif;
+    text-transform:uppercase;
+
 }
 
 /* top 50 lists */
