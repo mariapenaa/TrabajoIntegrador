@@ -3,6 +3,8 @@ body{
    /* background-image: url(../img/bkg-img.png);
     background-repeat: repeat-x;*/
     background-color: rgb(27, 3, 46);
+    margin: 0px;
+
 }
 
 a{
@@ -106,6 +108,7 @@ ul#icons{
     justify-content: space-between;
     align-items:center;
     margin-right:505px;
+    list-style: none;
 }
 
 #icons li{
