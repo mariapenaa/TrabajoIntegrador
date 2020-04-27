@@ -48,7 +48,10 @@ font-size: 50px;
 /*Datos album*/
  
 .info{
-    padding-right:150px;
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    width:500px;
 }
 
 .nombre{
@@ -87,3 +90,19 @@ ol.topsongs li{
 
 }
 
+/*genre*/
+.genre-artists{
+    border:solid white;
+    overflow-y: scroll;
+    border:solid white;
+    height:200px;
+    margin:30px;
+}
+
+.genre-artists-list{
+    font-size:5px;
+}
+
+.genre-artists-list li{
+    margin:3px;
+}
