@@ -37,7 +37,7 @@ header{
 header ul{
     display:flex;
     width:100%;
-    padding:0px 40px 0px 0px;
+    padding:0px 120px 0px 0px;
     align-items:center;
     justify-content:flex-end;
   
@@ -116,7 +116,58 @@ ul#icons{
     margin:20px;
 }
 
+@media only screen and (max-width: 768px){
+    li .logo-img{
+        margin-left:0px;
+        margin-right:40px;
+    }
 
+    .deezer{
+         margin-left:50px;
+         justify-content: flex-end;
+     }
 
+     ul#icons{
+         margin-right:200px;
+     }
+
+}
+
+@media only screen and (max-width: 320px){
+    /*Header*/
+    html{
+        display:flex;
+        width:100%;
+    }
+    li a{
+        display:none;
+    }
+
+    .logo-img {
+        height:70px;
+
+    }
+
+    img.logo-img{
+        margin:0px;
+    }
+    header ul{
+        text-decoration:none;
+        width:100%;
+        justify-content: center;
+        margin:0px;
+        margin-right:0px;
+        padding:0px;
+    }
+
+    header li{
+        margin:0px;
+    }
+
+    /*footer*/
+    footer{
+        height:300px;
+   
+}
 
 
