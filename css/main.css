@@ -36,8 +36,8 @@ header{
 
 header ul{
     display:flex;
-    width:1200px;
-    padding:0px;
+    width:100%;
+    padding:0px 40px 0px 0px;
     align-items:center;
     justify-content:flex-end;
   
@@ -115,6 +115,9 @@ ul#icons{
 #icons li{
     margin:20px;
 }
+
+/*tablet*/
+@media only screen and (max-width: 600px)
 
 
 
