@@ -352,7 +352,7 @@ h5{
             position:relative;
         }
 
-        ul.songs{
+        .songs ul{
             display:flex;
             flex-direction:row;
             flex-wrap:nowrap;
