@@ -77,6 +77,11 @@ footer{
     padding:10px;
     flex-wrap: nowrap;
     flex: row;
+    position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
 }
 .deezer{
    border-radius: 50%;

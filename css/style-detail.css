@@ -108,8 +108,52 @@ ol.topsongs li{
 }
 
 /*tablet*/
-@media only screen and (max-width: 600px)
+@media only screen and (max-width: 768px){
+    div.detail{
+        width: 700px;
+    }
+    .title{
+        width:700px;
+    }
+    .container{
+        width: 768px;
+    }
+}
 
+/* iphone */
+@media only screen and (max-width: 360px){
+.container{
+    height: 2000px;
+}
+.detail{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+div.detail{
+    width: 500px;
+    align-items: center;
+    margin-bottom: 500px;
+}
+img.fotodetail{
+    width: 100%;
+  
+}
+.foto1{
+    width: 500px;;
+}
+.info{
+    width: 100%;
+    align-items: center;
 
+}
+div.title{
+    height:1px;
+}
+.title{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
 
-
+}
