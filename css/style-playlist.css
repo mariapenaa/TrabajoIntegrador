@@ -28,15 +28,25 @@
     overflow-y:scroll;
     z-index:3;
     text-decoration: none;
-    display: flex; 
+     display: flex; 
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 
 }
 .list-foto{
     text-decoration: none;
     width: 50%;
 }
-
+.songs li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.songs h5{
+    padding: 20px;
+    text-align: center;
+}
 
 
