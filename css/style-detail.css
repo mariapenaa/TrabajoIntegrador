@@ -147,6 +147,14 @@ ol.topsongs li{
     }
     div.title{
         height:1px;
+@media only screen and (max-width: 768px){
+    .container{
+        width: 768px;
+        height: 950px;
+    }
+    div.detail{
+        width: 700px;
+        height: 350px;
     }
     .title{
        display: flex;
@@ -157,6 +165,21 @@ ol.topsongs li{
     div.genre-artists{
         width:500px;
         height:300px;
+     .info{
+        width:350px;
+        height:350px;
+
+    } 
+    .foto1{
+        width:350px;
+        height:350px;
+
+    }
+    .nombre{
+        font-size: 70px;
+    }
+    .info-list li{
+        margin: 5px 0px 15px 0px;
     }
 
    
