@@ -28,9 +28,15 @@
     overflow-y:scroll;
     z-index:3;
     text-decoration: none;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
-.songnames{
+.list-foto{
     text-decoration: none;
-    width: 100%;
+    width: 50%;
 }
+
+
 
