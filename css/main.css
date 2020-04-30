@@ -22,8 +22,8 @@ div{
     border-width:2px;
     border-color:solid white;
 }
-/* header */
 
+/* header */  
 header{
     display:flex;
     flex-direction:row;

@@ -23,9 +23,8 @@
   
 
 /* songs */
-.songs{
+div.songs{
     width:100%;
-    overflow-y:scroll;
     z-index:3;
     text-decoration: none;
      display: flex; 
@@ -38,11 +37,16 @@
     text-decoration: none;
     width: 50%;
 }
+
+.songs ul{
+    width:100%;
+}
 .songs li{
+    width:100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px;
 }
 .songs h5{
