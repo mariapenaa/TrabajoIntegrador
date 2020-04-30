@@ -40,14 +40,21 @@ div.songs{
 
 .songs ul{
     width:100%;
+    box-sizing: border-box;
 }
 .songs li{
+    box-sizing: border-box;
+    align-items: center;
     width:100%;
+    height:auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px;
+    padding:0px 20px;
+    border-bottom:dotted #A4B3B6;
+    font-size:30px;
+
 }
 .songs h5{
     padding: 20px;
@@ -55,6 +62,8 @@ div.songs{
 }
 .songs img{
     width: 100px;
+    height:100px;
+    border-radius:50%;
 }
 
 
