@@ -32,6 +32,7 @@
     flex-direction: row;
     flex-wrap: wrap; 
 
+
 }
 .list-foto{
     text-decoration: none;
@@ -47,6 +48,9 @@
 .songs h5{
     padding: 20px;
     text-align: center;
+}
+.songs img{
+    width: 100px;
 }
 
 
