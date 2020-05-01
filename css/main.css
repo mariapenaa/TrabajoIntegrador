@@ -68,7 +68,11 @@ li a{
 
 li .logo-img{
     margin-left:0px;
-    margin-right:500px;
+    margin-right:300px;
+}
+
+.logo-img a{
+    color:none;
 }
 /* footer */
 footer{
@@ -127,8 +131,12 @@ ul#icons{
 
 @media only screen and (max-width: 768px){
     li .logo-img{
-        margin-left:0px;
-        margin-right:40px;
+        margin-left:50px;
+        margin-right:0px;
+    }
+
+    header li{
+        margin-left:100px;
     }
 
     .deezer{
@@ -139,6 +147,8 @@ ul#icons{
      ul#icons{
          margin-right:200px;
      }
+
+
 
 }
 
