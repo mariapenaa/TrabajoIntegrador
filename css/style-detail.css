@@ -97,24 +97,29 @@ ol.topsongs li{
     border:solid white;
     height:200px;
     margin:30px;
+
 }
 
-.genre-artists-list{
+.genre-artists-list ul{
     font-size:5px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+     width: 50%; 
 }
 
 .genre-artists-list li{
     margin:3px;
-    /* width: 50%; */
+    display: flex;
+    flex-direction: row;
+    width: 50%;
 }
 .fotoartists{
-    display: inline;
     border-radius: 50%;
-    width: 50%;
+    width: 100px;
     height: 100px;
+}
+.nameartists{
+    width: 50%;
 }
 
 
