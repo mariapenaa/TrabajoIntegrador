@@ -396,7 +396,15 @@ h5{
             width:160px;
             border-right:dotted rgb(27, 3, 46);
         }
-
+        .songs a{
+           display: flex;
+        }
+        .albums a{
+            display: flex;
+         }
+         .artists a{
+             display: flex;
+         }
         /*info de la lista*/
         img.list-foto{
             width:60%;
