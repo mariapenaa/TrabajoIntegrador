@@ -118,7 +118,10 @@ div .listas{
     flex-wrap:nowrap;
     padding:20px;
     justify-content: space-between;
-    
+}
+
+.linea{
+    font-weight: 100;
 }
 
 /*songs*/
@@ -342,6 +345,10 @@ h5{
             height:500px;
             margin-bottom:40px;
             position:relative;
+        }
+
+        .linea{
+            display:none;
         }
 
         /*interior listas*/
