@@ -148,6 +148,8 @@ ul#icons{
         display:flex;
         width:100%;
     }
+
+
     li a{
         display:none;
     }
@@ -176,7 +178,9 @@ ul#icons{
     /*footer*/
     footer{
         height:300px;
-   
-}
+        width:100%;
+
+    }
+
 }
 

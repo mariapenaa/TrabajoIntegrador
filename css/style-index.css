@@ -341,6 +341,7 @@ h5{
             width:700px;
             height:500px;
             margin-bottom:40px;
+            position:relative;
         }
 
         /*interior listas*/
@@ -349,16 +350,19 @@ h5{
             flex-direction: column;
             flex-wrap: nowrap;
             justify-content:space-between;
-            position:relative;
+            z-index:1;
         }
 
-        .songs ul{
+        .songs ul, .albums ul, .artists ul{
             display:flex;
             flex-direction:row;
             flex-wrap:nowrap;
             overflow-x: scroll;
             width:5000px;
             height:500px;
+            z-index:2;
+            padding-left:50px;
+            margin:0px;
         }
 
         .list-title{
@@ -368,96 +372,29 @@ h5{
             justify-content: center;
         }
 
-        .songs li{
+        h3.list-title{
+            width:223px;
+            box-sizing:border-box;
+            position:absolute;
+            z-index: 10;
+            transform:rotate(-90deg);
+            top:78px;
+            left:-79px;
+        }
+
+        .songs li, .albums li, .artists li{
             display:flex;
             flex-direction:column;
             flex-wrap:nowrap;
-            width:200px;
-        }
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-        /*
-        div.listas{
-            display:flex;
-            flex-direction: column;
-            flex-wrap:nowrap;
-            height:800px;
-        }
-
-        div.songs, div.albums, div.artists{
-            width:700px;
-            height:250px;
-            display:flex;
-            flex-direction:row;
-            flex-wrap: nowrap;
-            position: relative;
-        }
-        
-        .songs li{
-            height:250px;
-            border:none;
-            display:flex;
-            flex-direction: column;
-            flex-wrap:nowrap;
-            width:400px;
-        }
-        
-        .songs ul{
-            overflow-x: scroll;
-            display:flex;
-            flex-direction: row;
-            flex-wrap:nowrap;
-            height:250px;
-            width:100%;
-        }
-        
-        h3.list-title{
-            transform:rotate(-90deg);
-            width:250px;
-        }
-
-        /*
-        .listas li{
-            font-size:30px;
-            display:flex;
-            flex-wrap:wrap;
-            flex-direction: column;
-            justify-content: center;
-            align-content:center;
-            align-items: center;
+            width:160px;
             border-right:dotted rgb(27, 3, 46);
         }
 
-        .list-title{
-            transform: rotate(-90deg);
-            width:229px;
-            text-align:center;
-            justify-content:center;
-            vertical-align: center;
+        /*info de la lista*/
+        img.list-foto{
+            width:60%;
         }
 
-        h3.list-title{
-            display:flex;
-            flex-direction:row;
-            flex-wrap:nowrap;
-            width:250px;
-        }
-        */
-    
-    
 
 
     }
