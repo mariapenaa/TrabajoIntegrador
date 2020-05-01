@@ -9,6 +9,7 @@ body{
 
 div.container{
     width:100%;
+    min-height:100vh;
 }
 
 a{
@@ -86,9 +87,7 @@ footer{
     flex-wrap: nowrap;
     flex: row;
     position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+    bottom: 0;
   
 }
 .deezer{

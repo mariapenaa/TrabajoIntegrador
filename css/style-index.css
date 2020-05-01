@@ -118,6 +118,7 @@ div .listas{
     flex-wrap:nowrap;
     padding:20px;
     justify-content: space-between;
+    margin-bottom:100px;
 }
 
 .linea{
