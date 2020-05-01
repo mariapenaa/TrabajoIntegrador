@@ -108,13 +108,15 @@ ol.topsongs li{
 
 .genre-artists-list li{
     margin:3px;
+    /* width: 50%; */
 }
 .fotoartists{
     display: inline;
     border-radius: 50%;
-    width: 100px;
+    width: 50%;
     height: 100px;
 }
+
 
 /*tablet*/
     @media only screen and (max-width: 768px){
