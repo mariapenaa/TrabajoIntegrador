@@ -210,21 +210,37 @@ ol.topsongs li{
     }
     div.genre-artists{
         height: 400px;
-        margin-top: 60px;
+        margin-top: 40px;
+        margin-left:0px;
     }
     div.info {
-        margin-top: 110px;
+        margin-top: 0px;
         text-align: center;
     }
+
+    div.info.genre{
+        margin-top:150px;
+    }
+
     h3.nombre{
         margin-top: 380px;
     }
    .genre-artists-list li{
-       margin-top: 2px;
+       margin-top: 20px;
    }
    .info-list li{
        margin-bottom: 2px;
    }
-}
+
+   ul.info-list{
+       margin-bottom:100px;
+   }
+
+   h2.nameartists{
+       display:flex;
+       align-items:center;
+   }
+
+
 
   
