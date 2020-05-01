@@ -101,10 +101,19 @@ ol.topsongs li{
 
 .genre-artists-list{
     font-size:5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .genre-artists-list li{
     margin:3px;
+}
+.fotoartists{
+    display: inline;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
 
 /*tablet*/
