@@ -183,8 +183,11 @@ ol.topsongs li{
     }
     div.title{
         height:1px;
-    }
 
+    }
+    .nombre{
+        margin-top: 300px;
+    }
 }
 
   
