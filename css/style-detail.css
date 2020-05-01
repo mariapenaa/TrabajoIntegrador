@@ -111,15 +111,18 @@ ol.topsongs li{
     margin:3px;
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 100%;
 }
 .fotoartists{
     border-radius: 50%;
     width: 100px;
     height: 100px;
+    margin-left: 10px;
 }
 .nameartists{
-    width: 50%;
+    width: 100%;
+    font-size: 20px;
+    margin-left:30px;;
 }
 
 
