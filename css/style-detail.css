@@ -127,8 +127,9 @@ ol.topsongs li{
             div.genre-artists{
                 width:500px;
                 height:300px;
+                margin: 0px;
             }
-             
+            
             .info{
                 width:350px;
                 height:350px;
