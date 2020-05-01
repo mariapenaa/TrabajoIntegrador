@@ -78,10 +78,19 @@ ul{
     font-size:30px;
 }
 
+li.top-songs-title{
+    margin-bottom:0px;
+}
 ol.topsongs li{
-    font-size:10px;
+    font-size:20px;
     margin:0px;
 }
+
+ol.topsongs{
+    padding-left:100px;
+}
+
+
 
 .datos-add{
     background-color:#A4B3B6;
@@ -125,13 +134,29 @@ ol.topsongs li{
     margin-left:30px;;
 }
 
+h2.nameartists{
+    display:flex;
+    align-items:center;
+}
+
+.genre-artists-list li{
+    margin-top: 20px;
+}
+
 
 /*tablet*/
     @media only screen and (max-width: 768px){
-     
+           
+
+            footer ul{
+                margin-right: 10px;
+            }
+
+
+          
             .container{
                 width: 100%;
-                height: 950px;
+                height:100vh;
             }
             div.detail{
                 width: 700px;
@@ -166,7 +191,19 @@ ol.topsongs li{
                 margin: 5px 0px 15px 0px;
             }
         
-           
+            ol.topsongs li{
+                font-size:10px;
+                margin:0px;
+            }
+
+            li.top-songs-title{
+                margin-bottom:0px;
+            }
+
+            footer{
+                position: relative;
+                top:64;px;
+            }
         
         }
         
@@ -175,9 +212,13 @@ ol.topsongs li{
 
     /* iphone */
     @media only screen and (max-width: 360px){
-    .container{
+     
+
+        .container{
         height: 2000px;
+
     }
+
     .detail{
         display: flex;
         flex-wrap: wrap;
@@ -185,9 +226,9 @@ ol.topsongs li{
     }
     div.detail{
         width: 500px;
-        height:500px;
+        height:950px;
         align-items: center;
-        margin-bottom: 500px;
+        margin-bottom: 10px;
     }
     img.fotodetail{
         width: 100%;
@@ -223,11 +264,9 @@ ol.topsongs li{
     }
 
     h3.nombre{
-        margin-top: 380px;
+        margin-top:10px;
     }
-   .genre-artists-list li{
-       margin-top: 20px;
-   }
+   
    .info-list li{
        margin-bottom: 2px;
    }
@@ -236,10 +275,21 @@ ol.topsongs li{
        margin-bottom:100px;
    }
 
-   h2.nameartists{
-       display:flex;
-       align-items:center;
-   }
+   ol.topsongs li{
+    font-size:20px;
+    margin:0px;
+    text-align: center;
+}
+
+    ol.topsongs{
+        padding:0px;
+    }
+
+    li.top-songs-title{
+        margin:10px;
+    }
+}
+   
 
 
 
