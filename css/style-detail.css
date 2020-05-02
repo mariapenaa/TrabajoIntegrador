@@ -150,7 +150,7 @@ h2.nameartists{
           
             .container{
                 width: 100%;
-                height:1150px;
+                height:100vh;
             }
             .albumcontainer{
                 height: 900px;
@@ -158,6 +158,7 @@ h2.nameartists{
             div.detail{
                 width: 700px;
                 height: 350px;
+                margin-top:50px;
             }
             .title{
                display: flex;
@@ -199,7 +200,7 @@ h2.nameartists{
 
             footer{
                 position: relative;
-                top:64;px;
+                top:64px;
             }
             footer ul{
                 margin-right: 10px;
@@ -212,12 +213,10 @@ h2.nameartists{
 
     /* iphone */
     @media only screen and (max-width: 360px){
-       .container{
-           height: 2000px;
-       }
-      .albumcontainer{
+      
+       .albumcontainer{
            height: 1500px;
-       }
+       } 
 
     .detail{
         display: flex;
