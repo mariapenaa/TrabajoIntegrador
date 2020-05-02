@@ -219,6 +219,7 @@ div.genre-artists{
 
     /* iphone */
     @media only screen and (max-width: 360px){
+
     div.container.albumcontainer{
         height:1400px;
 
@@ -306,6 +307,10 @@ div.genre-artists{
 
     footer{
         top:117px;
+    }
+
+    .datos li a{
+        display:block;
     }
 }
    
