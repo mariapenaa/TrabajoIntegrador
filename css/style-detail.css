@@ -147,16 +147,13 @@ h2.nameartists{
 /*tablet*/
     @media only screen and (max-width: 768px){
            
-
-            footer ul{
-                margin-right: 10px;
-            }
-
-
           
             .container{
                 width: 100%;
-                height:100vh;
+                height:1150px;
+            }
+            .albumcontainer{
+                height: 900px;
             }
             div.detail{
                 width: 700px;
@@ -204,6 +201,9 @@ h2.nameartists{
                 position: relative;
                 top:64;px;
             }
+            footer ul{
+                margin-right: 10px;
+            }
         
         }
         
@@ -212,12 +212,12 @@ h2.nameartists{
 
     /* iphone */
     @media only screen and (max-width: 360px){
-     
-
-        .container{
-        height: 2000px;
-
-    }
+       .container{
+           height: 2000px;
+       }
+      .albumcontainer{
+           height: 1500px;
+       }
 
     .detail{
         display: flex;

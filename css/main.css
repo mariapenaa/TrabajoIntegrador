@@ -204,7 +204,9 @@ ul#icons{
        margin:4px 300px;
     }
 
-   
+   img.deezer{
+    align-self: center;
+   }
     
     ul#icons{
         justify-content: space-around;
