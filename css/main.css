@@ -152,6 +152,7 @@ ul#icons{
 
 @media only screen and (max-width: 320px){
     /*Header*/
+
     html{
         display:flex;
         width:100%;
@@ -189,8 +190,39 @@ ul#icons{
     footer{
         height:300px;
         width:100%;
+        flex-direction:column;
+        flex-wrap:nowrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .deezer{
+       border-radius: 50%;
+       height: 100px;
+       width:100px;
+       align-items: center;
+       margin:4px 300px;
+    }
+
+   
+    
+    ul#icons{
+        justify-content: space-around;
+        margin-right:0px;
+        margin:0px;
+    }
+    
+    #icons li{
+        margin:20px;
+    }
+
+    ul.nombres{
+        margin:0px;
+        justify-content: center;
 
     }
+    
+
 
 }
 

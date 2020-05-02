@@ -305,6 +305,8 @@ h5{
         /*banner*/
         div.banner{
             height:350px;
+            padding-left:30px;
+            padding-right:30px;
         }
         
         .banner-img{
@@ -340,12 +342,17 @@ h5{
             flex-wrap:nowrap;
             height:800px;
             margin-bottom:20px;
+      
         }
         div.songs, div.albums, div.artists{
-            width:700px;
+            display:flex;
+            flex-direction: column;
+            align-self: center;
+            width:640px;
             height:500px;
             margin-bottom:40px;
             position:relative;
+    
         }
 
         .linea{
