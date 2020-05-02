@@ -80,7 +80,17 @@ h5{
     height:60px;
     border-radius:50%;
 }
+@media only screen and (max-width: 768px){
+        .container{
+            width:100%;
+        }
 
+        .playlist-img img{
+            width:787px;
+        }
+
+
+}
 @media only screen and (max-width: 320px){
     div.playlist-img{
         display:none;
