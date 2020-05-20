@@ -205,8 +205,22 @@ ul{
     align-content:center;
     align-items: center;
     border-bottom:dotted rgb(27, 3, 46);
-    border-width:0.5px;
+    border-width:0.5px;    
+    transition: 0.2s;
 }
+
+/*pseudoclase*/
+.listas li:hover {
+    background-color:rgb(210, 223, 226);
+}
+
+.listas a{
+    transition:0.3s;
+}
+.listas a:hover{
+    transform: scale(1.1);
+}
+
 
 h4{
     font-size:50px;
@@ -372,13 +386,15 @@ h5{
             display:flex;
             flex-direction:row;
             flex-wrap:nowrap;
-            overflow-x: scroll;
             width:5000px;
             height:500px;
             z-index:2;
             padding-left:50px;
             margin:0px;
+            position:absolute;
         }
+
+        
 
         .list-title{
             display:flex;
@@ -404,6 +420,11 @@ h5{
             width:160px;
             border-right:dotted rgb(27, 3, 46);
         }
+
+   
+
+
+    
         .songs a{
            display: flex;
         }
@@ -417,8 +438,8 @@ h5{
         img.list-foto{
             width:60%;
         }
-
-
+       
+ 
 
     }
 
