@@ -1,13 +1,17 @@
 window.onload = function(){}
 
-fetch("https://api.deezer.com/version/service/id/method/?parameters")
+fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556")
 .then(function(response) {
     return response.json() 
-    Headers(Access-Control-Allow-Origin https://cors-anywhere.herokuapp.com/),
   })
   
   .then(function(resultado) {
-    console.log(resultado)
+    console.log(resultado.title)
+    var cancion = resultado.title;
+    var li = document.querySelector(".songs li");
+    li.innerHTML += "<h4>" + cancion + "<h4>";
+
+
   })
   .catch(function(error) {
     console.log("Error: " + error);
