@@ -5,6 +5,10 @@ body{
 
 }
 
+.color-titulo{
+    color: white !important;
+}
+
 div.container{
     width:100%;
     position:relative;
