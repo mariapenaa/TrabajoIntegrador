@@ -8,8 +8,8 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556"
   .then(function(resultado) {
     console.log(resultado.title)
     var cancion = resultado.title;
-    var li = document.querySelector(".songs li");
-    li.innerHTML += "<h4>" + cancion + "<h4>";
+    //var li = document.querySelector(".songs li");
+    //li.innerHTML += "<h4>" + cancion + "<h4>";
 
 
   })
