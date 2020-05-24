@@ -17,46 +17,81 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556"
      console.log("Error: " + error);
    })
 
-   //TOP SONGS
+//TOP SONGS
 
 fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks")
 
 .then(function(response) {
     return response.json() 
   })
-    
+
     .then(function(resultado) {
       for (let i = 0; i < resultado.data.length; i++) {
-        console.log(resultado.data[i].album.title)
         var songTitle = resultado.data[i].album.title;
         var songList = document.querySelector(".songs");
         var songImg = resultado.data[i].album.cover;
         var artist = resultado.data[i].artist.name;
 
-        songList.innerHTML+= "<li><img class='list-foto' alt='albumcover' src='"+songImg+"'>"
-        songList.innerHTML+= "<a href='detailsong.html'><h4>"+songTitle+"</h4></a>";
-        songList.innerHTML+= "<span class='linea'>|</span><a href='detailartist.html'><h5>"+artist+"</h5></a></li>";
+        //songList.innerHTML+= "<li><img class='list-foto' alt='albumcover' src='"+songImg+"'>";
+       // songList.innerHTML+= "<a href='detailsong.html'><h4>"+songTitle+"</h4></a>";
+       //songList.innerHTML+= "<span class='linea'>|</span><a href='detailartist.html'><h5>"+artist+"</h5></a></li>";
 
-        
-        //songTitle+"</li>";
-
-
-        //   <li><img class="list-foto" src="img/hello.jpg" alt="hello">
-        //<a href="detailsong.html"><h4>Hello</h4></a><span class="linea">
-        //|</span><a href="detailartist.html"><h5>Adele</h5></a></li>
-
-        
+       songList.innerHTML+="<li><img class='list-foto' alt='albumcover' src='"+songImg+"'>"
+        +"<a href='detailsong.html'><h4>"+songTitle+"</h4></a><span class='linea'>|</span>"
+        +"<a href='detailartist.html'><h5>"+artist+"</h5></a></li>";
       }
-      console.log(resultado)
-      
-
    })
-
 
    .catch(function(error) {
      console.log("Error: " + error);
    })
 
+  //TOP ALBUMS
+  fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums")
+
+.then(function(response) {
+    return response.json() 
+  })
+
+    .then(function(resultado) {
+      for (let i = 0; i < resultado.data.length; i++) {
+        var albumTitle = resultado.data[i].title;
+        var albumList = document.querySelector(".albums");
+        var albumImg = resultado.data[i].cover;
+        var artist = resultado.data[i].artist.name;
+
+       albumList.innerHTML+="<li><img class='list-foto' alt='albumcover' src='"+albumImg+"'>"
+        +"<a href='detailalbum.html'><h4>"+albumTitle+"</h4></a><span class='linea'>|</span>"
+        +"<a href='detailartist.html'><h5>"+artist+"</h5></a></li>";
+      }
+   })
+
+   .catch(function(error) {
+     console.log("Error: " + error);
+   })
+
+//TOP ARTISTS
+fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists")
+
+.then(function(response) {
+    return response.json() 
+  })
+
+    .then(function(resultado) {
+      for (let i = 0; i < resultado.data.length; i++) {
+        var artistTitle = resultado.data[i].name;
+        var artistList = document.querySelector(".artists");
+        var artistImg = resultado.data[i].picture;
+
+       artistList.innerHTML+="<li><img class='list-foto' alt='artistcover' src='"+artistImg+"'>"
+        +"<a href='detailartist.html'><h4>"+artistTitle+"</h4></a><span class='linea'>|</span>"
+        +"<a href='detailartist.html'><h5>"+"artist"+"</h5></a></li>";
+      }
+   })
+
+   .catch(function(error) {
+     console.log("Error: " + error);
+   })
 
 
  
