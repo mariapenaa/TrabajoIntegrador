@@ -37,8 +37,9 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
        //songList.innerHTML+= "<span class='linea'>|</span><a href='detailartist.html'><h5>"+artist+"</h5></a></li>";
 
        songList.innerHTML+="<li><img class='list-foto' alt='albumcover' src='"+songImg+"'>"
-        +"<a href='detailsong.html'><h4>"+songTitle+"</h4></a><span class='linea'>|</span>"
+        +"<a href='detailsong.html'><h4>"+songTitle+"</h4></a>"
         +"<a href='detailartist.html'><h5>"+artist+"</h5></a></li>";
+        //<span class='linea'>|</span>
       }
    })
 
@@ -61,7 +62,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
         var artist = resultado.data[i].artist.name;
 
        albumList.innerHTML+="<li><img class='list-foto' alt='albumcover' src='"+albumImg+"'>"
-        +"<a href='detailalbum.html'><h4>"+albumTitle+"</h4></a><span class='linea'>|</span>"
+        +"<a href='detailalbum.html'><h4>"+albumTitle+"</h4></a>"
         +"<a href='detailartist.html'><h5>"+artist+"</h5></a></li>";
       }
    })
@@ -84,7 +85,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
         var artistImg = resultado.data[i].picture;
 
        artistList.innerHTML+="<li><img class='list-foto' alt='artistcover' src='"+artistImg+"'>"
-        +"<a href='detailartist.html'><h4>"+artistTitle+"</h4></a><span class='linea'>|</span>"
+        +"<a href='detailartist.html'><h4>"+artistTitle+"</h4></a>"
         +"<a href='detailartist.html'><h5>"+"artist"+"</h5></a></li>";
       }
    })
