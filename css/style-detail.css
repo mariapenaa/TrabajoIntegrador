@@ -150,7 +150,7 @@ div.genre-artists{
 
 
 /*tablet*/
-    @media only screen and (max-width: 768px){
+    @media  (max-width: 768px){
            
           
             .container{
@@ -218,7 +218,7 @@ div.genre-artists{
     
 
     /* iphone */
-    @media only screen and (max-width: 360px){
+    @media (max-width: 360px){
 
     div.container.albumcontainer{
         height:1400px;

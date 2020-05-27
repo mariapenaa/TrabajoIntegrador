@@ -251,7 +251,7 @@ h5{
 }
 
 /*tablet*/
-@media only screen and (max-width: 768px){
+@media (max-width: 768px){
  
    .banner{
        width:700px;
@@ -321,7 +321,7 @@ h5{
 
     
 }
-    @media only screen and (max-width: 360px){
+    @media (max-width: 360px){
         /*banner*/
         div.banner{
             height:350px;

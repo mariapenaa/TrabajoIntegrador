@@ -99,7 +99,7 @@ h5{
     height:60px;
     border-radius:50%;
 }
-@media only screen and (max-width: 768px){
+@media (max-width: 768px){
         .container{
             width:100%;
         }
@@ -110,7 +110,7 @@ h5{
 
 
 }
-@media only screen and (max-width: 320px){
+@media  (max-width: 320px){
     div.playlist-img{
         display:none;
     }
