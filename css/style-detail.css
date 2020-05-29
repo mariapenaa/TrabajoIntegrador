@@ -205,7 +205,7 @@ div.genre-artists{
             }
 
             footer{
-                position: relative;
+                position: static;
                 top:64px;
             }
             footer ul{

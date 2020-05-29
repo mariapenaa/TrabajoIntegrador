@@ -26,7 +26,7 @@ div{
 
 .banner{
     padding-top:110px;
-    width:1200px;
+    width:100%;
     height:700px;
     box-sizing: border-box;
     margin:15px 0px 30px 0px;
@@ -108,13 +108,13 @@ div{
 
 /* top 50 lists */
 div .listas{
-    width: 1200px;
+    width: 100%;
     padding: 0px;
     
 }
 .listas{
     margin: 80px 0px;
-    width:1200px;
+    width:100%;
     height:700px;
     display:flex;
     flex-wrap:nowrap;
