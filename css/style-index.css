@@ -178,7 +178,7 @@ div.artists{
     margin-top:0px;
 }
 
-ul.artists{
+ul.artists, ul.albums, ul.tracks{
     margin-top:0px;
 }
 
