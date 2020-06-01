@@ -52,7 +52,9 @@
     height:70px;
     background-color: rgb(27, 3, 46);
 }
-
+header ul {
+    list-style-type: none;
+}
 
 
 /* songs */
