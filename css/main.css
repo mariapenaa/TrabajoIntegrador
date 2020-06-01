@@ -124,10 +124,10 @@ footer{
     align-items:center;
 }
 .nombres li{
-    display: inline;
+    display: flex;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    margin:30px;
+    /* margin:30px; */
 }
 
 #icons{
