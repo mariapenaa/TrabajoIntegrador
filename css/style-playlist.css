@@ -8,20 +8,26 @@
         width:100%;
     }
 
-
+    header{
+        z-index:150;
+    }
 /* foto playlist */
+
 .title{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+ 
 }
 
 
 .title h3{
     padding:30px;
     font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    color:white;
 
   
 }

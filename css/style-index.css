@@ -162,10 +162,6 @@ div.albums{
     margin-top:0px;
 }
 
-ul.albums{
-    margin-top:0px;
-}
-
 /*artists*/
 .artists{
     border:solid white !important;
@@ -182,6 +178,7 @@ div.artists{
 
 ul.artists, ul.albums, ul.tracks{
     margin-top:0px;
+    margin-bottom:0px;
 }
 
 /*Interior de la lista*/
@@ -193,6 +190,8 @@ ul.artists, ul.albums, ul.tracks{
     margin:0px;
     text-align:center;
     height:65px;
+    color:white !important;
+    font-family:'Oswald', sans-serif !important;
 }
 
 ul{
@@ -233,6 +232,7 @@ h4{
     font-weight: 400;
     color:white;
     margin:0px;
+    font-family:'Oswald', sans-serif !important;
 }
 
 h5{

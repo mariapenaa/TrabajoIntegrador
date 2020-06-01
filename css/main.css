@@ -89,7 +89,11 @@ li a{
     color:white;
 }
 
-
+.searchbar-flex{
+    display:flex !important;
+    justify-content: center !important;
+    width:50% !important;
+}
 
 
 /* footer */
@@ -148,6 +152,8 @@ ul#icons{
 #icons li{
     margin:20px;
 }
+
+
 
 @media  (max-width: 768px){
     li .logo-img{
