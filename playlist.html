@@ -11,6 +11,12 @@
     <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit-icons.min.js"></script>
+
     <title>Playlist</title>
 </head>
 <body>
@@ -21,10 +27,14 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="genres.html">Genres</a></li>
-                <li><a href="playlist.html">Playlists</a></li>
-                <li class="searchbar"><input type="text" placeholder="Search.."></li>
-              
+                <li><a href="playlist.html">Playlists</a></li>      
             </ul>
+            <div class="uk-margin">
+                <form class="uk-search uk-search-default">
+                    <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+                    <input class="uk-search-input" type="search" placeholder="Search songs...">
+                </form>
+            </div>
         </header>
         <div class="playlist-img">
             <img src="img/fondoplaylist.jpg" alt="your playlist">
