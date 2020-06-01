@@ -1,0 +1,16 @@
+.container{
+    width: 100%;
+}
+header ul{
+    list-style: none;
+}
+h1{
+    text-align: center;
+    color: white !important;
+    font-family: 'Anton', sans-serif !important;
+    font-size: 50px !important;
+}
+.results{
+    height: 500px;
+    border: white 2px solid;
+}
