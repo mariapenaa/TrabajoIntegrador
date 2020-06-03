@@ -133,7 +133,7 @@ div .listas{
 /*songs*/
 .songs{
     border:solid white;
-    width:350px;
+    width:400px;
     background-color:#A4B3B6;
     overflow-y:scroll;
 }
@@ -152,7 +152,7 @@ ul.songs{
 /*albums*/
 .albums{
     border:solid white;
-    width:350px;
+    width:400px;
     background-color:#A4B3B6;
     overflow-y: scroll;
 }
@@ -165,7 +165,7 @@ div.albums{
 /*artists*/
 .artists{
     border:solid white !important;
-    width:350px;
+    width:400px;
     background-color:#A4B3B6;
     overflow-y: scroll; 
   
@@ -186,7 +186,7 @@ ul.artists, ul.albums, ul.tracks{
     font-size:40px;
     padding:2px;
     background-color: #D83F87;
-    width:350px;
+    width:400px;
     margin:0px;
     text-align:center;
     height:65px;

@@ -27,19 +27,27 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
 
     .then(function(resultado) {
       for (let i = 0; i < resultado.data.length; i++) {
+        console.log(resultado.data)
         var songTitle = resultado.data[i].album.title;
         var songList = document.querySelector(".songs");
         var songImg = resultado.data[i].album.cover;
         var artist = resultado.data[i].artist.name;
+        var trackId = resultado.data[i].id ;
 
         //songList.innerHTML+= "<li><img class='list-foto' alt='albumcover' src='"+songImg+"'>";
        // songList.innerHTML+= "<a href='detailsong.html'><h4>"+songTitle+"</h4></a>";
        //songList.innerHTML+= "<span class='linea'>|</span><a href='detailartist.html'><h5>"+artist+"</h5></a></li>";
 
        songList.innerHTML+="<li><img class='list-foto' alt='albumcover' src='"+songImg+"'>"
-        +"<a href='detailsong.html'><h4>"+songTitle+"</h4></a>"
+        +"<a href='detailsong.html?id="+trackId+"'>"+"<h4>"+songTitle+"</h4></a>"
         +"<a href='detailartist.html'><h5>"+artist+"</h5></a></li>";
         //<span class='linea'>|</span>
+
+        
+
+  
+
+
       }
    })
 
@@ -47,8 +55,10 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
      console.log("Error: " + error);
    })
 
+
+
   //Linkear detail
-  var trackDetail = 
+ /*  var trackDetail = 
 
   fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/track/"+trackDetail)
 
@@ -72,7 +82,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
      console.log("Error: " + error);
    })
 
-
+ */
 
 
 
