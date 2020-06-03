@@ -57,33 +57,6 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
 
 
 
-  //Linkear detail
- /*  var trackDetail = 
-
-  fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/track/"+trackDetail)
-
-.then(function(response) {
-    return response.json() 
-  })
-
-    .then(function(resultado) {
-      for (let i = 0; i < resultado.data.length; i++) {
-        var artistTitle = resultado.data[i].name;
-        var artistList = document.querySelector(".artists");
-        var artistImg = resultado.data[i].picture;
-
-       artistList.innerHTML+="<li><img class='list-foto' alt='artistcover' src='"+artistImg+"'>"
-        +"<a href='detailartist.html'><h4>"+artistTitle+"</h4></a>"
-        +"<a href='detailartist.html'><h5>"+"artist"+"</h5></a></li>";
-      }
-   })
-
-   .catch(function(error) {
-     console.log("Error: " + error);
-   })
-
- */
-
 
 
 
