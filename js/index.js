@@ -28,7 +28,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
     .then(function(resultado) {
       for (let i = 0; i < resultado.data.length; i++) {
         console.log(resultado.data)
-        var songTitle = resultado.data[i].album.title;
+        var songTitle = resultado.data[i].title;
         var songList = document.querySelector(".songs");
         var songImg = resultado.data[i].album.cover;
         var artist = resultado.data[i].artist.name;
