@@ -16,7 +16,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/"+idQuer
         var trackTitle = resultado.title;
         var trackAlbum = resultado.album.title;
         var trackDate = resultado.album.release_date;
-        var trackCover = resultado.album.cover;
+        var trackCover = resultado.album.cover_big;
         var docNombreCancion = document.querySelector(".nombre");
         var docNombreAlbum = document.querySelector (".album-name");
         var docFechaAlbum = document.querySelector (".album-date");
