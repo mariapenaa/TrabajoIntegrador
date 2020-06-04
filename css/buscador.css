@@ -5,35 +5,51 @@ header ul{
     list-style: none;
 }
 h1{
-    text-align: center;
+    text-align: left;
     color: white !important;
     font-family: 'Anton', sans-serif !important;
     font-size: 50px !important;
+
+
+
 }
 .search-results{
     font-size:40px;
+    margin:0px 10px;
+    color:grey;
   }
 
+
+  .user-search{
+    display:flex;
+    width:100%;
+    flex-direction: row nowrap;
+  }
   .results{
     display:flex;
     flex-direction:column;
     flex-wrap: nowrap;
     width:100%;
-    height:100vh;
   }
+
+  h2{
+    color:white;
+    text-align:left;
+  }
+
   .track-results{
     width:100%;
-    border:solid grey;
+
   }
 
   .artist-results{
     width:100%;
-    border:solid grey;
+
   }
   
   .album-results {
     width:100%;
-    border:solid grey;
+
   }
   ul.album-results-list, ul.track-results-list, ul.artist-results-list{
     display:flex;
@@ -48,9 +64,17 @@ h1{
      display:flex;
      flex-direction:column;
      flex-wrap:wrap;
+     margin:10px;
+     text-align: center;
+    background-color:rgb(54, 17, 85);
+    border-radius:20px;
+    padding:10px;
+    box-shadow: 0px 10px -14px 14px #FFF;
+
   }
   .results img{
     width:100%;
+    border-radius:50%;
   }
   .img-div{
     width:150px;
