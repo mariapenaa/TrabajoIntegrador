@@ -15,7 +15,7 @@ window.onload = function (){
            // var nombreArtista=resultado.data[i].artist.name;
             var album=resultado.data[i].title;
             var albumCover = resultado.data[i].cover;
-            searchResultAlbum.innerHTML+="<li><img src=' " + albumCover+"' >"+ album+ "<li>";
+            searchResultAlbum.innerHTML+="<li><div class='img-div'><img src=' " + albumCover+"' ></div>"+ album+ "<li>";
         }
     })
     .catch(function(error) {
@@ -31,7 +31,7 @@ window.onload = function (){
         for (let i = 0; i < resultado.data.length; i++) {
             var nombre=resultado.data[i].name;
             var artistCover = resultado.data[i].picture;
-            searchResultArtist.innerHTML+="<li><img src=' "+ artistCover+" '>"+nombre+"<li>";
+            searchResultArtist.innerHTML+="<li><div class='img-div'><img src=' "+ artistCover+" '></div>"+nombre+"<li>";
         }
     })
     .catch(function(error) {
@@ -47,7 +47,7 @@ window.onload = function (){
         for (let i = 0; i < resultado.data.length; i++) {
             var nombre=resultado.data[i].title;
             var albumCover = resultado.data[i].album.cover;
-            searchResultTrack.innerHTML+="<li><img src=' "+ albumCover+" '>"+nombre+"<li>";
+            searchResultTrack.innerHTML+="<li><div class='img-div'><img src=' "+ albumCover+" '></div>"+nombre+"<li>";
         }
     })
     .catch(function(error) {
