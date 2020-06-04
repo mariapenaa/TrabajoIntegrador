@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
-    <script src="js/index.js"></script>
+    <script src="js/buscador.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/css/uikit.min.css" />
 
 <!-- UIkit JS -->
@@ -31,15 +31,35 @@
                     <!-- <li class="searchbar"><input type="text" placeholder="Search.."></li> -->
                 </ul>
                 <div class="uk-margin">
-                    <form class="uk-search uk-search-default">
+                    <form class="uk-search uk-search-default" action="buscador.html" method="GET" >
                         <a href="" class="uk-search-icon-flip" uk-search-icon></a>
-                        <input class="uk-search-input" type="search" placeholder="Search songs...">
+                        <input class="uk-search-input" name="q" type="search" placeholder="Search songs...">
                     </form>
                 </div>
         
             </header>
         <h1>Search Results</h1>
-        <div class="results"></div>
+        <div class="results">
+            <h1 class="search-results"></h1>
+            <div class="track-results">
+                <h1>TRACKS</h1>
+                <ul class="track-results-list">
+                    <!--INFO DE API-->
+                </ul>
+            </div>
+            <div class="album-results">
+                <h1>ALBUMS</h1>
+                <ul class="album-results-list">
+                    <!--INFO DE API-->
+                </ul>
+            </div>
+            <div class="artist-results">
+                <h1>ARTISTS</h1>
+                <ul class="artist-results-list">
+                     <!--INFO DE API-->
+                </ul>
+            </div>
+        </div>
         <footer>
             <img class="deezer" src="img/deezer logo.png" alt="logo deezer">
             <ul id="icons">
