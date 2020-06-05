@@ -25,15 +25,25 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/"+idQuer
         docNombreAlbum.innerHTML += trackAlbum;
         docFechaAlbum.innerHTML += trackDate;
         docFotoAlbum.innerHTML += "<img class= 'fotodetail' src='"+trackCover+" ' alt='albumcover'>"
-    
-
+        var add = document.querySelector(".datos-add")
+        // add.onclick = addToPlaylist
+        add.addEventListener('click',function(){
+         canciones.push(resultado.id)
+        console.log (canciones)
+        })
+       
 
       
-   })
+      })
 
    .catch(function(error) {
      console.log("Error: " + error);
    })
+
+   var canciones = [];
+   localStorage.setItem('playlist', JSON.stringify(canciones));
+   localStorage.getItem('playlist')
+   canciones = JSON.parse(canciones);
 
 
 

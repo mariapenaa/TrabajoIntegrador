@@ -1,5 +1,6 @@
 window.onload= function(){
-var userTitle = document.querySelector(".playlistTitle")
+// titulo playlist
+ var userTitle = document.querySelector(".playlistTitle")
 var username= localStorage.getItem("username")
 if (username != "" && username !=null) {
     userTitle.innerHTML+= username+"'s Playlist"
@@ -8,6 +9,22 @@ if (username != "" && username !=null) {
     userTitle.innerHTML+= "My Playlist"
 }
 
-var 
+// agregar a playlist
+
+var canciones = [];
+
+// Guardo el objeto como un string
+localStorage.setItem('playlist', JSON.stringify(canciones));
+localStorage.getItem('playlist')
+// var canciones = localStorage.getItem('playlist');
+canciones = JSON.parse(canciones);
+
+for (let i = 0; i < canciones.length; i++) {
+    const element = canciones[i];
+    
+}
+    
+});
+console.log(canciones)
 
 }
