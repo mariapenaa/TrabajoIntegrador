@@ -28,11 +28,9 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/"+idQuer
         var add = document.querySelector(".datos-add")
         // add.onclick = addToPlaylist
         add.addEventListener('click',function(){
-         canciones.push(resultado.id)
-        console.log (canciones)
+         playlist.push(resultado.id)
+        console.log (playlist)
         })
-       
-
       
       })
 
@@ -40,10 +38,10 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/"+idQuer
      console.log("Error: " + error);
    })
 
-   var canciones = [];
-   localStorage.setItem('playlist', JSON.stringify(canciones));
+   var playlist = [];
+   localStorage.setItem('playlist', JSON.stringify(playlist));
    localStorage.getItem('playlist')
-   canciones = JSON.parse(canciones);
+   JSON.parse(localStorage.getItem(playlist));
 
 
 
