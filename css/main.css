@@ -1,4 +1,9 @@
 /*css*/
+*::-webkit-scrollbar {
+    display: none;
+  }
+  
+
 body{
     background-color: rgb(27, 3, 46);
     margin: 0px;

@@ -1,4 +1,24 @@
 window.onload = function(){
+  var userTitle = document.querySelector('.title1');
+
+     var username = localStorage.getItem("username")
+      
+  if (username != "" && username !=null) {
+ userTitle.innerHTML+= username+"'s"
+  } else { 
+    var newUsername = prompt( 'Cual es tu usuario?');
+    localStorage.setItem("username", newUsername); 
+    if (newUsername != "" && newUsername != null) {
+      userTitle.innerHTML+= newUsername+"'s"
+      
+    } else {
+      userTitle.innerHTML+= "your"
+    }
+  }
+
+
+
+
 //TRACK
 fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556")
 .then(function(response) {
@@ -43,10 +63,6 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
         +"<a href='detailartist.html'><h5>"+artist+"</h5></a></li>";
         //<span class='linea'>|</span>
 
-        
-
-  
-
 
       }
    })
@@ -54,23 +70,6 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
    .catch(function(error) {
      console.log("Error: " + error);
    })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -120,12 +119,6 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
    .catch(function(error) {
      console.log("Error: " + error);
    })
-
-
- 
-
-
-
 
 
 //CARROUSEL
