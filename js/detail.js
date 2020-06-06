@@ -34,6 +34,14 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/"+idQuer
       
       })
 
+
+
+
+
+
+
+      
+
    .catch(function(error) {
      console.log("Error: " + error);
    })
