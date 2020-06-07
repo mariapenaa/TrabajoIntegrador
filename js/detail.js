@@ -32,6 +32,20 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         
       })
       
+        var add = document.querySelector(".datos-add")
+    })
+      //ALBUM
+
+      //ARTIST
+
+      //GENRE
+        
+        
+        
+        
+        
+        // add.onclick = addToPlaylist
+       
       .catch(function(error) {
         console.log("Error: " + error);
       })
