@@ -17,24 +17,26 @@ if (playlistStorage == null || playlistStorage == "[]") {
     playlist=[];
     songs.innerHTML+= "No hay canciones en tu playlist"
 } else {
-    playlist.forEach(function() {
-    songs.innerHTML
+    playlist.forEach(function(idQuerySelector) {
+    AgregarAPlaylist(idQuerySelector)
     });
 
 
-function agregarAPlaylist(idQuerySelector){
+function AgregarAPlaylist(idQuerySelector){
     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/"+idQuerySelector)
     .then(function(response){
-        return response.JSON();
+        return response.json();
     })
-    .then(function(resultado){
-        songs.innerHTML+='<li>' + resultado.data.title + '</li>' 
+    .then(function(track){
+        songs.innerHTML+='<li class="list-items">' + track.title + '</li>' 
+        
     })
     .catch(function(error){
         console.log(error);
     })
    
-}
+};
+AgregarAPlaylist()
 }
 
 // // Guardo el objeto como un string
