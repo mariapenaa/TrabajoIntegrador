@@ -29,28 +29,8 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         docNombreAlbum.innerHTML += trackAlbum;
         docFechaAlbum.innerHTML += trackDate;
         docFotoAlbum.innerHTML += "<img class= 'fotodetail' src='"+trackCover+" ' alt='albumcover'>"
-<<<<<<< HEAD
         
       })
-=======
-        var add = document.querySelector(".datos-add")
-        
-      //ALBUM
-
-      //ARTIST
-
-      //GENRE
-        
-        
-        
-        
-        
-        // add.onclick = addToPlaylist
-        add.addEventListener('click',function(){
-         playlist.push(resultado.id)
-        console.log (playlist)
-        })
->>>>>>> 5991217dd7fb11ca7b8cd19b5513dc706f047610
       
       .catch(function(error) {
         console.log("Error: " + error);
@@ -74,8 +54,6 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
   //  localStorage.getItem('playlist')
   //  JSON.parse(localStorage.getItem(playlist));
    })
-<<<<<<< HEAD
-=======
 
    var playlist = [];
    localStorage.setItem('playlist', JSON.stringify(playlist));
@@ -96,5 +74,3 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
 
 
 
->>>>>>> 5991217dd7fb11ca7b8cd19b5513dc706f047610
-}
