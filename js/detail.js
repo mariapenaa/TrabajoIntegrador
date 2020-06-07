@@ -34,7 +34,6 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         //artists
         var artistTitle = resultado.name;
         var artistFollowers = resultado.nb_fan;
-        // var songsAlbum = resultado
         var artistFoto = resultado.picture;
         var docArtistName = document.querySelector (".nombre")
         var docArtistFollowers = document.querySelector(".artist-followers")
@@ -42,7 +41,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         docArtistName.innerHTML+= artistTitle
         docArtistFollowers.innerHTML+= artistFollowers
         docFotoArtist.innerHTML+= artistFoto
-        
+        console.log(artistTitle)
       })
       
     
@@ -93,6 +92,14 @@ if (typeQuerySelector == "artist") {
   var artist = document.querySelector(".info-artists")
   artist.style.display = "flex"
 }
+if (typeQuerySelector == "album") {
+  var tracks = document.querySelector(".info-albums")
+  tracks.style.display = "flex"
+} 
+if (typeQuerySelector == "genre") {
+  var tracks = document.querySelector(".info-genre")
+  tracks.style.display = "flex"
+} 
 
 }
 
