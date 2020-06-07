@@ -25,30 +25,29 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/"+idQuer
         docNombreAlbum.innerHTML += trackAlbum;
         docFechaAlbum.innerHTML += trackDate;
         docFotoAlbum.innerHTML += "<img class= 'fotodetail' src='"+trackCover+" ' alt='albumcover'>"
-        var add = document.querySelector(".datos-add")
-        // add.onclick = addToPlaylist
-        add.addEventListener('click',function(){
-         playlist.push(resultado.id)
-        console.log (playlist)
-        })
-      
+        
       })
-
-   .catch(function(error) {
-     console.log("Error: " + error);
+      
+      .catch(function(error) {
+        console.log("Error: " + error);
+      })
+      let playlistStorage = localStorage.getItem("playlist")
+      if (playlistStorage== null) {
+        playlist = [];
+      } else {
+        playlist= JSON.parse(playlistStorage)
+      }
+      
+      
+      var add = document.querySelector(".datos-add")
+      add.addEventListener('click',function(e){
+        playlist.push(idQuerySelector)
+        console.log (playlist)
+        
+        localStorage.setItem("playlist", JSON.stringify(playlist));
+  //  var playlist = [];
+  //  localStorage.setItem('playlist', JSON.stringify(playlist));
+  //  localStorage.getItem('playlist')
+  //  JSON.parse(localStorage.getItem(playlist));
    })
-
-   var playlist = [];
-   localStorage.setItem('playlist', JSON.stringify(playlist));
-   localStorage.getItem('playlist')
-   JSON.parse(localStorage.getItem(playlist));
-
-
-
-
-
-
-
-    
-
 }
