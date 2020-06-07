@@ -87,10 +87,12 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
         var albumList = document.querySelector(".albums");
         var albumImg = resultado.data[i].cover;
         var artist = resultado.data[i].artist.name;
+        var trackType = resultado.data[i].type;
+        var albumID = resultado.data[i].id;
 
        albumList.innerHTML+="<li><img class='list-foto' alt='albumcover' src='"+albumImg+"'>"
-        +"<a href='detailalbum.html'><h4>"+albumTitle+"</h4></a>"
-        +"<a href='detailartist.html'><h5>"+artist+"</h5></a></li>";
+        +"<a href='detailsong.html?id="+albumID+"&type="+trackType+"'><h4>"+albumTitle+"</h4></a>"
+        +"<a href='detailsong.html?id="+albumID+"&type="+trackType+"'><h5>"+artist+"</h5></a></li>";
       }
    })
 
@@ -110,10 +112,12 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
         var artistTitle = resultado.data[i].name;
         var artistList = document.querySelector(".artists");
         var artistImg = resultado.data[i].picture;
+        var trackType = resultado.data[i].type;
+        var artistId = resultado.data[i].id;
 
        artistList.innerHTML+="<li><img class='list-foto' alt='artistcover' src='"+artistImg+"'>"
-        +"<a href='detailartist.html'><h4>"+artistTitle+"</h4></a>"
-        +"<a href='detailartist.html'><h5>"+"artist"+"</h5></a></li>";
+        +"<a href='detailsong.html?id="+artistId+"&type="+trackType+"'><h4>"+artistTitle+"</h4></a>"
+        +"<a href='detailsong.html?id="+artistId+"&type="+trackType+"'><h5>"+artistTitle+"</h5></a></li>";
       }
    })
 

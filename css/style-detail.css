@@ -48,8 +48,8 @@ font-size: 100px;
 
 /*Datos album*/
  
-.info{
-    display:flex;
+.info-artists, .info-songs, .info-albums ,.info-genres{
+    display: none;
     justify-content: center;
     flex-direction:column;
     width:500px;
