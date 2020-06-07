@@ -49,5 +49,4 @@ function agregarAPlaylist(idQuerySelector){
 // }
     
 // console.log(canciones)
-
-
+}
