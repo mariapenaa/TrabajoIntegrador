@@ -16,7 +16,9 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
   })
 
     .then(function(resultado) {
-      //TRACK
+        if (typeQuerySelector =="track"){
+        var tracks = document.querySelector(".info-songs")
+        tracks.style.display = "flex"
         var trackTitle = resultado.title;
         var trackAlbum = resultado.album.title;
         var trackDate = resultado.album.release_date;
@@ -29,26 +31,38 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         docNombreAlbum.innerHTML += trackAlbum;
         docFechaAlbum.innerHTML += trackDate;
         docFotoAlbum.innerHTML += "<img class= 'fotodetail' src='"+trackCover+" ' alt='albumcover'>"
-        var add = document.querySelector(".datos-add")
+      }
         
         //artists
+        if(typeQuerySelector == "artist"){
+        var artist = document.querySelector(".info-artists")
+        artist.style.display = "flex"
         var artistTitle = resultado.name;
         var artistFollowers = resultado.nb_fan;
         var artistFoto = resultado.picture;
-        var docArtistName = document.querySelector (".nombre")
-        var docArtistFollowers = document.querySelector(".artist-followers")
+        var docArtistName = document.querySelector (".nombre-artist")
+        var docArtistFollowers = document.querySelector(".artists-followers")
         var docFotoArtist = document.querySelector (".foto1")
         docArtistName.innerHTML+= artistTitle
         docArtistFollowers.innerHTML+= artistFollowers
-        docFotoArtist.innerHTML+= artistFoto
-        console.log(artistTitle)
+        docFotoArtist.innerHTML+= "<img class= 'fotodetail' src='"+artistFoto+" ' alt='albumcover'>"
+        }
+
+        //albums
+        if (typeQuerySelector == "album") {
+          var tracks = document.querySelector(".info-albums")
+          tracks.style.display = "flex"
+        } 
+
+        //genres
+        if (typeQuerySelector == "genre") {
+          var tracks = document.querySelector(".info-genre")
+          tracks.style.display = "flex"
+        } 
       })
       
     
-      //Album
-
-
-      //GENRE
+      
         
         
         
@@ -84,22 +98,9 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
   //  localStorage.getItem('playlist')
   //  JSON.parse(localStorage.getItem(playlist));
 
-if (typeQuerySelector == "track") {
-  var tracks = document.querySelector(".info-songs")
-  tracks.style.display = "flex"
-} 
-if (typeQuerySelector == "artist") {
-  var artist = document.querySelector(".info-artists")
-  artist.style.display = "flex"
-}
-if (typeQuerySelector == "album") {
-  var tracks = document.querySelector(".info-albums")
-  tracks.style.display = "flex"
-} 
-if (typeQuerySelector == "genre") {
-  var tracks = document.querySelector(".info-genre")
-  tracks.style.display = "flex"
-} 
+
+
+
 
 }
 
