@@ -52,6 +52,23 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         if (typeQuerySelector == "album") {
           var tracks = document.querySelector(".info-albums")
           tracks.style.display = "flex"
+          var albumTitle = resultado.title;
+          var albumArtist = resultado.artist.name;
+          var albumGenre = resultado.genres.data[0].name;
+          var albumDate = resultado.release_date;
+          var albumCover = resultado.cover_big;
+          var docAlbumTitle = document.querySelector(".nombre-album")
+          var docAlbumArtist = document.querySelector(".album-artist")
+          var docAlbumGenre = document.querySelector(".album-genre")
+          var docAlbumDate = document.querySelector(".album-date")
+          var docAlbumCover = document.querySelector(".foto1")
+          docAlbumTitle.innerHTML+= albumTitle
+          docAlbumArtist.innerHTML+= albumArtist
+          docAlbumGenre.innerHTML+= albumGenre
+          docAlbumDate.innerHTML+= albumDate
+          docAlbumCover.innerHTML+= "<img class= 'fotodetail' src='"+ albumCover + "' alt='albumcover'>"
+
+          console.log(resultado.release_date)
         } 
 
         //genres
