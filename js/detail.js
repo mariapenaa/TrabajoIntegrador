@@ -78,6 +78,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
           var genreName = resultado.name;
           var docGenreName = document.querySelector('.nombre-genre')
           docGenreName.innerHTML+= genreName
+          console.log(resultado.data)
           
         } 
       })
