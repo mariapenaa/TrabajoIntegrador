@@ -39,7 +39,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         artist.style.display = "flex"
         var artistTitle = resultado.name;
         var artistFollowers = resultado.nb_fan;
-        var artistFoto = resultado.picture_big;
+        var artistFoto = resultado.picture;
         var docArtistName = document.querySelector (".nombre-artist")
         var docArtistFollowers = document.querySelector(".artists-followers")
         var docFotoArtist = document.querySelector (".foto1")
