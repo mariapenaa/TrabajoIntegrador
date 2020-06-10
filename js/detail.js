@@ -55,6 +55,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
           var albumTitle = resultado.title;
           var albumArtist = resultado.artist.name;
           var albumGenre = resultado.genres.data[0].name;
+          var albumGenreId = resultado.genres.data[0].id
           var albumDate = resultado.release_date;
           var albumCover = resultado.cover_big;
           var docAlbumTitle = document.querySelector(".nombre-album")
@@ -64,11 +65,12 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
           var docAlbumCover = document.querySelector(".foto1")
           docAlbumTitle.innerHTML+= albumTitle
           docAlbumArtist.innerHTML+= albumArtist
-          docAlbumGenre.innerHTML+= albumGenre
-          docAlbumDate.innerHTML+= albumDate
+          docAlbumGenre.innerHTML+= "<a href='detailsong.html?id="+albumGenreId+"&type=genre'>"+albumGenre+"</a>"
+          //docAlbumDate.innerHTML+= albumDate
           docAlbumCover.innerHTML+= "<img class= 'fotodetail' src='"+ albumCover + "' alt='albumcover'>"
-
+          console.log(resultado)
           console.log(resultado.release_date)
+          console.log(albumGenreId)
         } 
 
         //genres
@@ -76,7 +78,10 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
           var tracks = document.querySelector(".info-genre")
           tracks.style.display = "flex"
           var genreName = resultado.name;
+          var genreImage = resultado.picture_big;
+          var docGenreImage = document.querySelector(".foto1")
           var docGenreName = document.querySelector('.nombre-genre')
+          docGenreImage.innerHTML+="<img src='"+genreImage+"' alt='genre image'>";
           docGenreName.innerHTML+= genreName
           console.log(resultado.data)
           
