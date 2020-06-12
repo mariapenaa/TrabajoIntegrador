@@ -40,30 +40,13 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         var artistTitle = resultado.name;
         var artistFollowers = resultado.nb_fan;
         var artistFoto = resultado.picture;
-        var artistID = resultado.id;
         var docArtistName = document.querySelector (".nombre-artist")
         var docArtistFollowers = document.querySelector(".artists-followers")
         var docFotoArtist = document.querySelector (".foto1")
         docArtistName.innerHTML+= artistTitle
         docArtistFollowers.innerHTML+= artistFollowers
         docFotoArtist.innerHTML+= "<img class= 'fotodetail' src='"+artistFoto+" ' alt='albumcover'>"
-        fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/"+artistID+"/top")
-
-        .then(function(response) {
-            return response.json() 
-          })
-        
-            .then(function(resultado) {
-              console.log(resultado)
-              console.log(resultado)
-              for (let i = 0; i < "5"; i++) {
-              var topSongs = resultado.data[i].title
-              var idTracks = resultado.data[i].id
-              var docTopSongs = document.querySelector(".topsongs")
-              docTopSongs.innerHTML+= "<li> <a href='detailsong.html?"+ idTracks+"&+type=track'>"+ topSongs+"</liv>"
-           }
-             console.log("Error: " + error);
-        })
+        }
 
         //albums
         if (typeQuerySelector == "album") {
@@ -110,27 +93,29 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
           
               .then(function(resultado) {
                 console.log(resultado)
-                console.log(resultado)
-                for (let i = 0; i < "10"; i++) {
-                var nombreArtista = resultado.data[i].name;
-                var genreArtistFoto = resultado.data[i].picture
-                var genreArtistName = document.querySelector(".genre-artists-list")
-               genreArtistName.innerHTML+= "<li> <img class= 'fotoartists' src ='"+ genreArtistFoto + "' alt=foto artist><span></span> <h2 class='nameartists'>"+nombreArtista+"</h2></li>" 
-              
-             }
+               
+             })
+          
+             .catch(function(error) {
                console.log("Error: " + error);
-             
-            
-        })
-      })
-    }
-
+             })//cierra then
+          
+        }//cierrra if
+      })//cierra then
       
+    
+      
+        
+        
+        
+        
+        
         // add.onclick = addToPlaylist
        
       .catch(function(error) {
         console.log("Error: " + error);
       })
+
       let playlistStorage = localStorage.getItem("playlist")
       if (playlistStorage== null) {
         playlist = [];
