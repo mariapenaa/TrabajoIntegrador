@@ -93,9 +93,15 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
           
               .then(function(resultado) {
                 console.log(resultado)
-               
+                console.log(resultado)
+                for (let i = 0; i < "10"; i++) {
+                var nombreArtista = resultado.data[i].name;
+                var genreArtistFoto = resultado.data[i].picture
+                var genreArtistName = document.querySelector(".genre-artists-list")
+               genreArtistName.innerHTML+= "<li> <img class= 'fotoartists' src ='"+ genreArtistFoto + "' alt=foto artist><span></span> <h2 class='nameartists'>"+nombreArtista+"</h2></li>" 
+                }
              })
-          
+            //  <li><img class="fotoartists" src="img/billieeilish.jpg" alt="billie eilish"><span></span><h2 class="nameartists"></h2></li>
              .catch(function(error) {
                console.log("Error: " + error);
              })
