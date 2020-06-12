@@ -12,7 +12,13 @@ if (username != "" && username !=null) {
 // agregar a playlist
 let playlistStorage = localStorage.getItem("playlist");
 let playlist = JSON.parse(playlistStorage);
-var songs = document.querySelector(".songnames")
+var songs = document.querySelector(".songnames");
+var docplayCancion = document.querySelector(".iframe");
+var doctituloCancion = document.querySelector(".songtitle");
+var docartistaCancion = document.querySelector(".song-artist");
+var docfechaCreada = document.querySelector(".date-added");
+var docduracion = document.querySelector(".duration");
+
 if (playlistStorage == null || playlistStorage == "[]") {
     playlist=[];
     songs.innerHTML+= "No hay canciones en tu playlist"
@@ -27,9 +33,19 @@ function AgregarAPlaylist(idQuerySelector){
     .then(function(response){
         return response.json();
     })
-    .then(function(track){
-        songs.innerHTML+='<li class="list-items">' + track.title + '</li>' 
-        
+    .then(function(resultado){
+        console.log(tituloCancion)
+        var tituloCancion = resultado.name;
+        var artistaCancion = resultado.artist.name;
+        var fechaCreada = resultado.release-date;
+        var duration = resultado.duration
+
+    // docplayCancion.innerHTML += '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=true&width=100&height=100&color=007FEB&layout=dark&size=medium&type=playlist&id='+track.id+'&app_id=1" width="100" height="100"></iframe>'
+    doctituloCancion.innerHTML+= tituloCancion
+    docartistaCancion.innerHTML+= artistaCancion
+    docfechaCreada.innerHTML+= fechaCreada
+    docduracion.innerHTML+= duration
+
     })
     .catch(function(error){
         console.log(error);
@@ -39,16 +55,4 @@ function AgregarAPlaylist(idQuerySelector){
 AgregarAPlaylist()
 }
 
-// // Guardo el objeto como un string
-// localStorage.setItem('playlist', JSON.stringify(canciones));
-// localStorage.getItem('playlist')
-// // var canciones = localStorage.getItem('playlist');
-// canciones = JSON.parse(canciones);
-
-// for (let i = 0; i < canciones.length; i++) {
-//     const element = canciones[i];
-    
-// }
-    
-// console.log(canciones)
 }

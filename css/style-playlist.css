@@ -48,10 +48,6 @@
     box-sizing: border-box;
     align-items: center;
     width:100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding:100px 20px 80px 20px;
     border-bottom:dotted #A4B3B6;
     font-size:30px;
@@ -88,15 +84,21 @@ div.songs{
     box-sizing: border-box;
     align-items: center;
     width:100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: left;
     padding:0px 20px;
     border-bottom:dotted #A4B3B6;
     font-size:30px;
     height:70px;
-
+}
+.list-header{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: left;
+    padding:0px 20px;
 }
 
 h5{
