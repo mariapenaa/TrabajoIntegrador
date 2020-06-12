@@ -13,15 +13,15 @@ if (username != "" && username !=null) {
 let playlistStorage = localStorage.getItem("playlist");
 let playlist = JSON.parse(playlistStorage);
 var songs = document.querySelector(".songnames");
-var docplayCancion = document.querySelector(".iframe");
-var doctituloCancion = document.querySelector(".songtitle");
-var docartistaCancion = document.querySelector(".song-artist");
+//var docplayCancion = document.querySelector(".iframe");
+//var doctituloCancion = document.querySelector(".songtitle");
+/*var docartistaCancion = document.querySelector(".song-artist");
 var docfechaCreada = document.querySelector(".date-added");
-var docduracion = document.querySelector(".duration");
+var docduracion = document.querySelector(".duration"); */
 
 if (playlistStorage == null || playlistStorage == "[]") {
     playlist=[];
-    songs.innerHTML+= "No hay canciones en tu playlist"
+    doctituloCancion.innerHTML+= "No hay canciones en tu playlist"
 } else {
     playlist.forEach(function(idQuerySelector) {
     AgregarAPlaylist(idQuerySelector)
@@ -34,18 +34,12 @@ function AgregarAPlaylist(idQuerySelector){
         return response.json();
     })
     .then(function(resultado){
-        console.log(tituloCancion)
-        var tituloCancion = resultado.name;
-        var artistaCancion = resultado.artist.name;
-        var fechaCreada = resultado.release-date;
-        var duration = resultado.duration
+    console.log(resultado)
+    songs.innerHTML+='<li class="list-items"><span class="iframe"><iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=true&width=70&height=70&color=007FEB&layout=dark&size=small&type=playlist&id='+idQuerySelector+'&app_id=1" width="70" height="70"></iframe></span>'+'<span class="songtitle">'+resultado.title+'</span><span class="song-artist">'+resultado.artist.name+'</span><span class="date-added">'+resultado.album.release_date+'</span><span class="duration">'+resultado.duration+'</span></li>';
+    var mind = time%(60*60); 
+    var minutes = math.floor(mind/60);
 
-    // docplayCancion.innerHTML += '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=true&width=100&height=100&color=007FEB&layout=dark&size=medium&type=playlist&id='+track.id+'&app_id=1" width="100" height="100"></iframe>'
-    doctituloCancion.innerHTML+= tituloCancion
-    docartistaCancion.innerHTML+= artistaCancion
-    docfechaCreada.innerHTML+= fechaCreada
-    docduracion.innerHTML+= duration
-
+ 
     })
     .catch(function(error){
         console.log(error);

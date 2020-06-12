@@ -13,6 +13,10 @@
     }
 /* foto playlist */
 
+iframe{
+    border-radius:50%;
+  
+}
 .title{
     width: 100%;
     display: flex;
