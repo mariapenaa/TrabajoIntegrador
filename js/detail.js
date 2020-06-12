@@ -39,7 +39,8 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         artist.style.display = "flex"
         var artistTitle = resultado.name;
         var artistFollowers = resultado.nb_fan;
-        var artistFoto = resultado.picture;
+        var artistFoto = resultado.picture_big;
+        var artistID = resultado.id;
         var docArtistName = document.querySelector (".nombre-artist")
         var docArtistFollowers = document.querySelector(".artists-followers")
         var docFotoArtist = document.querySelector (".foto1")
@@ -47,6 +48,20 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         docArtistFollowers.innerHTML+= artistFollowers
         docFotoArtist.innerHTML+= "<img class= 'fotodetail' src='"+artistFoto+" ' alt='albumcover'>"
         }
+        fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/"+artistID+"/top")
+        .then(function(response) {
+            return response.json() 
+          })
+            .then(function(resultado) {
+              console.log(resultado)
+              console.log(resultado)
+              for (let i = 0; i < "5"; i++) {
+              var topSongs = resultado.data[i].title
+              var idTracks = resultado.data[i].id
+              var docTopSongs = document.querySelector(".topsongs")
+              docTopSongs.innerHTML+= "<li> <a href='detailsong.html?id="+ idTracks+"&type=track'>"+ topSongs+"</li>"
+           }
+          })
 
         //albums
         if (typeQuerySelector == "album") {
@@ -85,23 +100,33 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
           docGenreImage.innerHTML+="<img src='"+genreImage+"' alt='genre image'>";
           docGenreName.innerHTML+= genreName
           console.log(resultado.data)
-          fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/"+genreID+"/artists")
+                fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/"+genreID+"/artists")
 
-          .then(function(response) {
-              return response.json() 
-            })
-          
-              .then(function(resultado) {
-                console.log(resultado)
-               
-             })
+                .then(function(response) {
+                    return response.json() 
+                  })
+                
+                    .then(function(resultado) {
+                      console.log(resultado)
+                      console.log(resultado)
+                      for (let i = 0; i < "10"; i++) {
+                      var nombreArtista = resultado.data[i].name;
+                      var genreArtistFoto = resultado.data[i].picture
+                      var genreArtistName = document.querySelector(".genre-artists-list")
+                     genreArtistName.innerHTML+= "<li> <img class= 'fotoartists' src ='"+ genreArtistFoto + "' alt=foto artist><span></span> <h2 class='nameartists'>"+nombreArtista+"</h2></li>" 
+                      }
+                   })
+                     console.log("Error: " + error);
+                  }
+        })
           
              .catch(function(error) {
                console.log("Error: " + error);
-             })//cierra then
+             })//cierra catch
           
-        }//cierrra if
-      })//cierra then
+        // }//cierrra if
+      //cierra then
+            
       
     
       
