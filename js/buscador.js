@@ -4,12 +4,15 @@ window.onload = function (){
     var loqueBuscoElUsuario = queryStringObj.get("q");
     var userSearch = document.querySelector(".search-results")
     userSearch.innerHTML+=loqueBuscoElUsuario;
+    var spinner = document.querySelector("#spinner")
+    spinner.style.display='block'
     //BUSCAR ALBUM
     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q="+loqueBuscoElUsuario)
     .then(function(response) {
       return response.json()
     })
     .then(function(resultado) {
+      spinner.style.display='none'
     var searchResultAlbum = document.querySelector(".album-results-list");
     for (let i = 0; i < resultado.data.length; i++) {
            // var nombreArtista=resultado.data[i].artist.name;
@@ -68,14 +71,5 @@ window.onload = function (){
       //       $("#spinner").css("display","none");
       //     });
       // });
-      $(document).ajaxStart(function () {
-      
-        $("#spinner").show();
-      });
-        $(document).ajaxStop(function () {
-      
-        $("#spinner").hide();
-      
-        });
-
+    
 }

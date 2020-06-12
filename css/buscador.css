@@ -13,6 +13,9 @@ h1{
 
 
 }
+#spinner{
+  display: none;
+}
 .search-results{
     font-size:40px;
     margin:0px 10px;
