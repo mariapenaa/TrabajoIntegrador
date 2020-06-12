@@ -35,7 +35,7 @@ function AgregarAPlaylist(idQuerySelector){
     })
     .then(function(resultado){
     console.log(resultado)
-    songs.innerHTML+='<li class="list-items"><span class="iframe"><iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=true&width=70&height=70&color=007FEB&layout=dark&size=small&type=playlist&id='+idQuerySelector+'&app_id=1" width="70" height="70"></iframe></span>'+'<span class="songtitle">'+resultado.title+'</span><span class="song-artist">'+resultado.artist.name+'</span><span class="date-added">'+resultado.album.release_date+'</span><span class="duration">'+resultado.duration+'</span></li>';
+    songs.innerHTML+='<li class="list-items"><span class="iframe"><iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=70&height=70&color=007FEB&layout=dark&size=small&type=tracks&id='+idQuerySelector+'&app_id=1" width="70" height="70"></iframe></span>'+'<span class="songtitle">'+resultado.title+'</span><span class="song-artist">'+resultado.artist.name+'</span><span class="date-added">'+resultado.album.release_date+'</span><span class="duration">'+resultado.duration+'</span></li>';
     var mind = time%(60*60); 
     var minutes = math.floor(mind/60);
 
