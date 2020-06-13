@@ -39,9 +39,7 @@ div{
 
 /* header */  
 header{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+
     background-color:#D83F87;
     position: sticky;
     top: 0;
@@ -49,6 +47,13 @@ header{
     height: 100px;
     box-sizing: border-box;
     width: 100%;
+}
+
+.desktop-menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
 }
 .logo {
 margin-right: auto;
@@ -158,6 +163,10 @@ ul#icons{
     margin:20px;
 }
 
+.burger-menu-mobile{
+    display:none;
+}
+
 
 
 @media  (max-width: 768px){
@@ -203,20 +212,26 @@ ul#icons{
     }
 
 
-    header li a{
+    .desktop-menu{
         display:none;
     }
 
-
-
-    .logo-img {
-        height:70px;
-
+    .burger-menu-mobile{
+        display:flex;
+        box-sizing: border-box;
     }
-
-    img.logo-img{
-        margin:0px;
+    
+    button{
+        border:none !important;
+        width:50%;
     }
+    
+    div.uk-margin.searchbar-flex{
+        margin:10px 10px;
+        padding-top:15px;
+        padding-bottom:10px;
+    }
+    
     header ul{
         text-decoration:none;
         width:100%;

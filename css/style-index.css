@@ -372,6 +372,7 @@ h5{
             align-self: center;
             width:640px;
             height:500px;
+            box-sizing: border-box;
             margin-bottom:40px;
             position:relative;
     
@@ -422,9 +423,9 @@ h5{
         }
 
         .songs li, .albums li, .artists li{
-            display:flex;
-            flex-direction:column;
-            flex-wrap:nowrap;
+            display:grid;
+            grid-template-rows:1fr 0.5fr 0.5fr;
+            grid-template-columns:1fr;
             width:160px;
             border-right:dotted rgb(27, 3, 46);
         }
