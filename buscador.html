@@ -22,23 +22,48 @@
 <body>
     <div class="container">
         <header>
+            <div class="desktop-menu">
             <div class="logo">
-                <img class="logo-img" src="img/logo-img.png" alt="logo"></div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="genres.html">Genres</a></li>
-                    <li><a href="playlist.html">Playlists</a></li>
-                    <!-- <li class="searchbar"><input type="text" placeholder="Search.."></li> -->
-                </ul>
-                <div class="uk-margin">
-                    <form class="uk-search uk-search-default" action="buscador.html" method="GET" >
-                        <a href="" class="uk-search-icon-flip" uk-search-icon></a>
-                        <input class="uk-search-input" name="q" type="search" placeholder="Search songs...">
-                    </form>
-                </div>
-                
-            </header>
+            <img class="logo-img" src="img/logo-img.png" alt="logo"></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="playlist.html">Playlists</a></li>
+                <!-- <li class="searchbar"><input type="text" placeholder="Search.."></li> -->
+            </ul>
+            <div class="uk-margin searchbar-flex">
+                <form class="uk-search uk-search-default" action="buscador.html" method="GET" >
+                    <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+                    <input class="uk-search-input" name="q" type="search" placeholder="Search songs...">
+                </form>
+            </div>
+        </div>
+          <div class="burger-menu-mobile">
+            <button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary"> <img class="logo-img" src="img/logo-img.png" alt="logo"></button>
+             <div class="uk-margin searchbar-flex">
+                <form class="uk-search uk-search-default" action="buscador.html" method="GET" >
+                    <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+                    <input class="uk-search-input" name="q" type="search" placeholder="Search songs...">
+                </form>
+            </div>
             
+            <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+                <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+            
+                    <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                        <li class="uk-parent">
+                            <a href="index.html">Home</a>
+                            <a href="genres.html">Genres</a>
+                            <a href="playlist.html">Playlists</a>
+                        </li>
+                        
+                    </ul>
+            
+                </div>
+            </div>
+            
+          </div>
+        </header>
             <span uk-spinner="ratio: 4.5" id="spinner"></span>
             
             <div class="user-search">
