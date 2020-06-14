@@ -72,6 +72,9 @@ div{
     height:550px;
     background-color: rgb(129, 90, 180);
 }
+.banner-title .title1{
+    font-size: 100px;
+}
 /* carousel */
 [data-component="slideshow"] .slide {
     display: none;
