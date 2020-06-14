@@ -54,6 +54,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
         var artist = resultado.data[i].artist.name;
         var trackId = resultado.data[i].id ;
         var trackType = resultado.data[i].type;
+        var artistId = resultado.data[i].artist.id;
 
         //songList.innerHTML+= "<li><img class='list-foto' alt='albumcover' src='"+songImg+"'>";
        // songList.innerHTML+= "<a href='detailsong.html'><h4>"+songTitle+"</h4></a>";
@@ -61,7 +62,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
 
        songList.innerHTML+="<li><img class='list-foto' alt='albumcover' src='"+songImg+"'>"
         +"<a href='detailsong.html?id="+trackId+"&type="+trackType+"'>"+"<h4>"+songTitle+"</h4></a>"
-        +"<a href='detailartist.html'><h5>"+artist+"</h5></a></li>";
+        +"<a href='detailsong.html?id="+artistId+"&type=artist'><h5>"+artist+"</h5></a></li>";
         //<span class='linea'>|</span>
 
 

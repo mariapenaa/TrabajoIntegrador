@@ -76,15 +76,16 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
           var albumGenreId = resultado.genres.data[0].id
           var albumDate = resultado.release_date;
           var albumCover = resultado.cover_big;
+          var artistId = resultado.artist.id;
           var docAlbumTitle = document.querySelector(".nombre-album")
           var docAlbumArtist = document.querySelector(".album-artist")
           var docAlbumGenre = document.querySelector(".album-genre")
           var docAlbumDate = document.querySelector(".album-date")
           var docAlbumCover = document.querySelector(".foto1")
           docAlbumTitle.innerHTML+= albumTitle
-          docAlbumArtist.innerHTML+= albumArtist
+          docAlbumArtist.innerHTML+= "<a href='detailsong.html?id="+artistId+"&type=artist'>"+ albumArtist +"</a>"
           docAlbumGenre.innerHTML+= "<a href='detailsong.html?id="+albumGenreId+"&type=genre'>"+albumGenre+"</a>"
-          //docAlbumDate.innerHTML+= albumDate
+          docAlbumDate.innerHTML+= albumDate
           docAlbumCover.innerHTML+= "<img class= 'fotodetail' src='"+ albumCover + "' alt='albumcover'>"
           console.log(resultado)
           console.log(resultado.release_date)
@@ -153,21 +154,28 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
       
       
       var add = document.querySelector(".datos-add")
+      if (playlist.includes(idQuerySelector)) {
+        document.querySelector(".datos-add").innerHTML = "Remove"
+      }
+      
+      
+      
       add.addEventListener('click',function(e){
-        playlist.push(idQuerySelector)
         console.log (playlist)
         
+        if (playlist.includes(idQuerySelector)) {
+          var indiceEnPlaylist = playlist.indexOf(idQuerySelector);
+          playlist.splice(indiceEnPlaylist,1)
+          document.querySelector(".datos-add").innerHTML = "Add to playlist"
+        }
+        else{
+          playlist.push(idQuerySelector)
+          document.querySelector(".datos-add").innerHTML = "Remove"
+        }
         localStorage.setItem("playlist", JSON.stringify(playlist));
-  //  var playlist = [];
-  //  localStorage.setItem('playlist', JSON.stringify(playlist));
-  //  localStorage.getItem('playlist')
-  //  JSON.parse(localStorage.getItem(playlist));
+      
    })
 
-  //  var playlist = [];
-  //  localStorage.setItem('playlist', JSON.stringify(playlist));
-  //  localStorage.getItem('playlist')
-  //  JSON.parse(localStorage.getItem(playlist));
 
 
 
