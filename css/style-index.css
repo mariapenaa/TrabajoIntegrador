@@ -137,7 +137,7 @@ div .listas{
 /*songs*/
 .songs{
     border:solid white;
-    width:400px;
+    width:29%;
     background-color:#A4B3B6;
     overflow-y:scroll;
 }
@@ -156,7 +156,7 @@ ul.songs{
 /*albums*/
 .albums{
     border:solid white;
-    width:400px;
+    width:29%;
     background-color:#A4B3B6;
     overflow-y: scroll;
 }
@@ -169,7 +169,7 @@ div.albums{
 /*artists*/
 .artists{
     border:solid white !important;
-    width:400px;
+    width:29%;
     background-color:#A4B3B6;
     overflow-y: scroll; 
   
@@ -190,7 +190,7 @@ ul.artists, ul.albums, ul.tracks{
     font-size:40px;
     padding:2px;
     background-color: #D83F87;
-    width:400px;
+    width:100%;
     margin:0px;
     text-align:center;
     height:65px;
@@ -261,7 +261,7 @@ h5{
  
    .banner{
       
-       height:450px;
+       height:400px;
    }
 
    .minibanner{
@@ -290,7 +290,6 @@ h5{
  
     .listas{
         margin-top:50px;
-        width:700px;
         height:500px;
     }
 
@@ -299,7 +298,6 @@ h5{
     }
 
     ul.songs, ul.albums, ul.artists{
-        width:200px;
         border:none;
     }
     
@@ -325,7 +323,47 @@ h5{
 }
     @media (max-width: 360px){
         /*banner*/
+        .banner-img{
+            display:none;
+        }
+
         div.banner{
+            height:300px;
+            padding-left:30px;
+            padding-right:30px;
+        }
+
+
+        .minibanner{
+            height:200px;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:nowrap;
+        }
+
+        .banner-title{
+            height:200px;
+            display:flex;
+            width:100%;
+        }
+
+        div.title1, div.title3{
+            align-items:center;
+        }
+
+        div.title2{
+            font-size:80px;
+            margin-bottom:15px;
+        }
+
+        /*PROBLEMA: imposible sacarle la medida, porque el 100% es igual al largo del interior de la lista*/
+        div.listas{
+            width:525px;
+        }
+
+
+
+    /* div.banner{
             height:350px;
             padding-left:30px;
             padding-right:30px;
@@ -354,7 +392,7 @@ h5{
         div.title2{
             font-size:80px;
             margin-bottom:15px;
-        }
+        } */
 
         /*listas*/
 
@@ -364,7 +402,6 @@ h5{
             flex-wrap:nowrap;
             height:800px;
             margin-bottom:20px;
-            width:100%;
       
         }
         div.songs, div.albums, div.artists{
@@ -376,9 +413,8 @@ h5{
             display:flex;
             flex-direction: row;
             flex-wrap:nowrap;
-        
-
-
+            width:100%;
+            z-index:1;
     
         }
 
@@ -387,6 +423,7 @@ h5{
         }
          .songs, .albums, .artists{
              overflow-x:scroll;
+             overflow-y: hidden;
          }
     
 
@@ -396,7 +433,7 @@ h5{
             flex-direction: column;
             flex-wrap: nowrap;
             justify-content:space-between;
-            z-index:1;
+         
         }
 
         .songs ul, .albums ul, .artists ul{
@@ -409,8 +446,8 @@ h5{
             padding-left:50px;
             margin:0px;
             position:absolute;
-        }
-        */
+        }*/
+        
         
 
         .list-title{
