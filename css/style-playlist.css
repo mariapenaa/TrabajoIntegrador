@@ -114,13 +114,23 @@ h5{
     height:60px;
     border-radius:50%;
 }
+
+/*PSEUDOCLASES*/
+.list-items:hover {
+    background-color:rgb(73, 40, 102);
+}
+
+.list-items{
+    transition:0.3s;
+}
+
+
 @media (max-width: 768px){
         .container{
             width:100%;
         }
 
         .playlist-img img{
-            width:787px;
         }
 
 
@@ -135,13 +145,17 @@ h5{
     }
 
     .songs li{
-        font-size:50px;
+        font-size:25px;
         height:110px;
     }
 
     .songs img{
         width:100px;
         height:100px;
+    }
+
+    .songs .list-items{
+        font-size:20px;
     }
 }
 
