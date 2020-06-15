@@ -117,7 +117,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
                       var nombreArtista = resultado.data[i].name;
                       var genreArtistFoto = resultado.data[i].picture
                       var genreArtistName = document.querySelector(".genre-artists-list")
-                     genreArtistName.innerHTML+= "<li> <img class= 'fotoartists' src ='"+ genreArtistFoto + "' alt=foto artist><span></span> <h2 class='nameartists'>"+nombreArtista+"</h2></li>" 
+                     genreArtistName.innerHTML+= "<li> <img class= 'fotoartists' src ='"+ genreArtistFoto + "' alt=foto artist><span></span> <h2 class='nameartists'>"+nombreArtista+"</h2></li>"
                       }
                    })
                      console.log("Error: " + error);
