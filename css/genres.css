@@ -55,3 +55,28 @@ div.uk-inline-clip.uk-transition-toggle{
     height:130px;
 }
 
+
+/*card interior*/
+.uk-card-default{
+    background: transparent !important;
+}
+
+/*card
+.uk-margin-small-top{
+    position:absolute !important;
+    top:27px !important;
+    right:165px !important;
+
+}
+.genre-card-single a{
+    color:white !important;
+    font-size:40px;
+
+}
+div.genre-card-single{
+    position:relative;
+
+}
+*/
+
+

@@ -1,5 +1,6 @@
 window.onload = function(){
 
+
     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre")
     .then(function(response) {
         return response.json() 
@@ -12,9 +13,10 @@ window.onload = function(){
                 var genreFoto = resultado.data[i].picture_big;
                 var genreId = resultado.data[i].id;
                 console.log(genreName)
-                 //cierra primer for
-                  
-            }
+             
+                
+            } //cierra primer for
+
                 fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/"+genreId+"/artists")
                  .then(function(response) {
                     return response.json() 
