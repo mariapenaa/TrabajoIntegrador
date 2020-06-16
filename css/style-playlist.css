@@ -114,7 +114,18 @@ h5{
     height:60px;
     border-radius:50%;
 }
-
+.duration{
+    display: grid;
+    justify-content: right;
+}
+.songtitle{
+    display: grid;
+    justify-content: left;
+}
+.song-artist{
+    display: grid;
+    justify-content: left;
+}
 /*PSEUDOCLASES*/
 .list-items:hover {
     background-color:rgb(73, 40, 102);
@@ -132,7 +143,9 @@ h5{
 
         .playlist-img img{
         }
-
+        .date-added{
+            display: none;
+        }
 
 }
 @media  (max-width: 320px){
