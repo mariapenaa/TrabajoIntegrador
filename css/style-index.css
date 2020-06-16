@@ -74,7 +74,7 @@ div{
 }
 .banner-title .title1{
     font-size: 70px;
-    
+
 }
 /* carousel */
 [data-component="slideshow"] .slide {
@@ -295,10 +295,12 @@ h5{
 
     div.songs, div.albums, div.artists{
         height:550px;
+        width: 100%;
     }
 
     ul.songs, ul.albums, ul.artists{
         border:none;
+        width: 100%;
     }
     
     h3.list-title{
@@ -323,11 +325,11 @@ h5{
 }
     @media (max-width: 360px){
         /*banner*/
-        .banner-img{
-            display:none;
+        .banner{
+            display:none !important;
         }
 
-        div.banner{
+        /* div.banner{
             height:300px;
             padding-left:30px;
             padding-right:30px;
@@ -345,20 +347,21 @@ h5{
             height:200px;
             display:flex;
             width:100%;
-        }
+        } */
 
-        div.title1, div.title3{
+        /* div.title1, div.title3{
             align-items:center;
         }
 
         div.title2{
             font-size:80px;
             margin-bottom:15px;
-        }
+        } */
 
         /*PROBLEMA: imposible sacarle la medida, porque el 100% es igual al largo del interior de la lista*/
         div.listas{
             width:525px;
+      
         }
 
 
