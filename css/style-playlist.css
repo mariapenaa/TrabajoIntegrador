@@ -141,7 +141,8 @@ h5{
             width:100%;
         }
 
-        .playlist-img img{
+        .playlist-img img{ 
+            display: none;
         }
         .date-added{
             display: none;
