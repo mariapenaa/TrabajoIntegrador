@@ -25,6 +25,7 @@ window.onload = function(){
                     .then(function(resultado) {
                         
                        for(let i = 0; i<resultado.data.length; i++){
+                         console.log(genreName)
                             var topArtist = resultado.data[i].picture_big
                             genreCard.innerHTML+="<div class='genre-card-single'><div class='uk-text-center uk-card uk-card-default uk-card-body genre-div uk-cover-container'>"
                             +" <div class='uk-inline-clip uk-transition-toggle' tabindex='0'><img src='"+genreFoto+"' alt='genre foto' uk-cover>"
