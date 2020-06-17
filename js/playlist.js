@@ -11,7 +11,7 @@ if (username != "" && username !=null) {
 
 // agregar a playlist
 let playlistStorage = localStorage.getItem("playlist");
-let playlist = JSON.parse(playlistStorage);
+var playlist = JSON.parse(playlistStorage);
 var songs = document.querySelector(".songnames");
 
 //var docplayCancion = document.querySelector(".iframe");
@@ -36,7 +36,7 @@ if (playlistStorage == null || playlistStorage == "[]") {
             return response.json();
         })
         .then(function(resultado){
-            console.log(resultado)
+       
             var songTitle = resultado.title
             var songArtist = resultado.artist.name
             var releaseDate = resultado.album.release_date
@@ -52,9 +52,22 @@ if (playlistStorage == null || playlistStorage == "[]") {
             songs.innerHTML+='<li class="list-items"><span id="iframe"><iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=70&height=70&color=007FEB&layout=dark&size=small&type=tracks&id='
             +idQuerySelector+'&app_id=1" width="70" height="70"></iframe></span>'+'<span class="songtitle"><a href="detailsong.html?id='+idQuerySelector+'&type=track">'
             +songTitle+'</span></a><span class="song-artist"><a href="detailsong.html?id='+artistID+'&type=artist">'+songArtist+'</a></span><span class="date-added">'
-            +releaseDate+'</span><span class="duration">'+songDuration+'</span><span class="remove"><button class= "remove-button"><i class="fas fa-times"></i></button></span></li>';
-            //var mind = time%(60*60); 
-            //var minutes = math.floor(mind/60);
+            +releaseDate+'</span><span class="duration">'+songDuration+'</span><span class="remove"><button class="remove-button"><i class="fas fa-times"></i></button></span></li>';
+           
+
+            var removeSong = document.querySelectorAll(".remove-button")
+
+            removeSong.addEventListener('click',function (idQuerySelector){
+            var indiceEnPlaylist = playlist.indexOf(idQuerySelector);
+            playlist.splice(indiceEnPlaylist,1)
+            console.log(playlist)
+            })
+
+            
+
+          
+    
+    
             
         })
         
@@ -64,16 +77,7 @@ if (playlistStorage == null || playlistStorage == "[]") {
     };
     
     AgregarAPlaylist()
-    var removeSong = document.querySelectorAll(".remove-button")
-    removeSong.addEventListener('click',function(e){
-        
-        if (playlist.includes(idQuerySelector)) {
-            var indiceEnPlaylist = playlist.indexOf(idQuerySelector);
-            playlist.splice(indiceEnPlaylist,1)
-        }
-    })
-    removeSong()
-    console.log(playlist)
+    
 }
 
 
