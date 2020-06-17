@@ -89,7 +89,7 @@ div.songs{
     align-items: center;
     width:100%;
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 0.6fr 0.4fr;
+    grid-template-columns: 0.5fr 1fr 1fr 0.6fr 0.4fr 0.3fr;
     grid-template-rows: 1fr;
     justify-content: left;
     padding:10px 20px;
@@ -99,12 +99,15 @@ div.songs{
 }
 .list-header{
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 0.6fr 0.4fr;
+    grid-template-columns: 0.5fr 1fr 1fr 0.6fr 0.4fr 0.3fr;
     grid-template-rows: 1fr;
     justify-content: left;
 
 }
-
+.remove{
+    display: grid;
+    justify-content: right;
+}
 h5{
     margin:0px;
     color: white !important;
