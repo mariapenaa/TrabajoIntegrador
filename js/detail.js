@@ -85,7 +85,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
           docAlbumTitle.innerHTML+= albumTitle
           docAlbumArtist.innerHTML+= "<a href='detailsong.html?id="+artistId+"&type=artist'>"+ albumArtist +"</a>"
           docAlbumGenre.innerHTML+= "<a href='detailsong.html?id="+albumGenreId+"&type=genre'>"+albumGenre+"</a>"
-          docAlbumDate.innerHTML+= albumDate
+          docAlbumDate.innerHTML+= albumDate.toString()
           docAlbumCover.innerHTML+= "<img class= 'fotodetail' src='"+ albumCover + "' alt='albumcover'>"
           console.log(albumDate)
        
