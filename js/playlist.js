@@ -41,25 +41,35 @@ if (playlistStorage == null || playlistStorage == "[]") {
             var songArtist = resultado.artist.name
             var releaseDate = resultado.album.release_date
             var duration = resultado.duration
-            var albumID = resultado.album.id
+            //var albumID = resultado.album.id
             var artistID = resultado.artist.id
-        
+     
+       
+            
             
             //duration a minutos
             var minutes = Math.floor(duration / 60);
             var seconds = duration - minutes * 60;
             var songDuration= minutes+":"+seconds;
-            var iframeSource = '<iframe scrolling="no" frameborder="0" allowTransparency="true" width="70" height="70"></iframe>'
-            songs.innerHTML+='<li class="list-items"><span><button id="iframe"><img src="'+resultado.album.cover+'"></button></span><span class="songtitle"><a href="detailsong.html?id='+idQuerySelector+'&type=track">'
+            songs.innerHTML+='<li class="list-items"><span><button id="iframeBoton"><img src="'+resultado.album.cover+'"></button></span><span class="songtitle"><a href="detailsong.html?id='+idQuerySelector+'&type=track">'
             +songTitle+'</span></a><span class="song-artist"><a href="detailsong.html?id='+artistID+'&type=artist">'+songArtist+'</a></span><span class="date-added">'
             +releaseDate+'</span><span class="duration">'+songDuration+'</span><span class="remove"><button class="remove-button"><i class="fas fa-times"></i></button></span></li>';
-           var iframePlayer = document.querySelector(".iframe-player");
-            var iframeButton = document.querySelector("#iframe");
-            iframePlayer.innerHTML+= iframeSource 
-            iframeButton.addEventListener('click',function(){
-            iframeSource.src ='https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=70&height=70&color=007FEB&layout=dark&size=small&type=tracks&id='
-            +idQuerySelector+'&app_id=1'
-            })
+            
+            
+            
+            var iframeHTML = document.querySelector("#iframe-html");
+            var iframeButton = document.querySelector("#iframeBoton");
+           
+            iframeButton.onclick = function(idQuerySelector){
+                iframeHTML.src ='https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=70&height=70&color=007FEB&layout=dark&size=small&type=tracks&id='+idQuerySelector+'&app_id=1'
+            }
+            
+           
+
+
+            
+              
+            
         
 
         //     var removeSong = document.querySelectorAll(".remove-button")
@@ -82,11 +92,18 @@ if (playlistStorage == null || playlistStorage == "[]") {
         .catch(function(error){
             console.log(error);
         })
+
+        
+        
+        
+
+        
     };
     
     AgregarAPlaylist()
-    
+   
 }
+
 
 
 
