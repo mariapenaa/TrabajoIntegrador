@@ -46,7 +46,7 @@ font-size: 100px;
     width:100%;
 }
 h3.nombre {
-font-size: 7vw;
+font-size: 4.5vw;
 }
 h3.nombre.nombre-artist{
 font-size: 5vw;
@@ -69,7 +69,7 @@ font-size: 5vw;
 }
 
 span.datos{
-    font-size:4vw;
+    font-size:2vw;
     color:#D83F87;
 }
 
@@ -83,7 +83,7 @@ ul{
 .info-list li{
     margin:20px 0px 30px 0px;
     color:white;
-    font-size:3vw;
+    font-size:2vw;
 }
 
 li.top-songs-title{
@@ -323,7 +323,7 @@ h3.nombre.nombre-album{
         margin:10px;
     }
     span.datos{
-        font-size: 40px;
+        font-size: 20px;
     }
 
     h3.nombre.nombre-album{

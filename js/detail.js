@@ -28,8 +28,9 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         var docFechaAlbum = document.querySelector (".album-date");
         var docFotoAlbum = document.querySelector (".foto1");
         var docPlaysong = document.querySelector(".play-song")
+        // var idAlbum = resultado.
         docNombreCancion.innerHTML+=trackTitle;
-        docNombreAlbum.innerHTML += trackAlbum;
+        // docNombreAlbum.innerHTML += "<li> <a href='detailsong.html?id="+ id+"&type=track'>"+ trackAlbum+"</li>"
         docFechaAlbum.innerHTML += trackDate;
         docPlaysong.innerHTML+="<span class='iframe'><iframe scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=70&height=70&color=007FEB&layout=dark&size=small&type=tracks&id='"+idQuerySelector +"'&app_id=1' width='70' height='70'></iframe></span>"
         docFotoAlbum.innerHTML += "<img class= 'fotodetail' src='"+trackCover+" ' alt='albumcover'>"
