@@ -18,7 +18,6 @@ window.onload = function(){
 
 
 
-  spinner.style.display='block'
 //TRACK
 fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556")
 .then(function(response) {
@@ -39,7 +38,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556"
    })
 
 //TOP SONGS
-spinner.style.display='block'
+
 fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks")
 
 .then(function(response) {
@@ -47,7 +46,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
   })
 
     .then(function(resultado) {
-      spinner.style.display='none'
+
       for (let i = 0; i < resultado.data.length; i++) {
         console.log(resultado.data)
         var songTitle = resultado.data[i].title;
@@ -76,7 +75,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
    })
 
 
-   spinner.style.display='block'
+
   //TOP ALBUMS
   fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums")
 
@@ -85,7 +84,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
   })
 
     .then(function(resultado) {
-      spinner.style.display='none'
+
       for (let i = 0; i < resultado.data.length; i++) {
         var albumTitle = resultado.data[i].title;
         var albumList = document.querySelector(".albums");

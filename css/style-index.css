@@ -328,11 +328,15 @@ h5{
         height:220px;
         padding:10px 0px;
         margin-bottom:0px;
+        margin-left:10px;
+        margin-right:10px;
+    
 
     }
 
     div.minibanner{
         height:150px;
+        border:none;
     }
 
     .banner-title{
@@ -362,27 +366,51 @@ h5{
             width:100%;
         }
 
-        .songs, .albums, .artists{
-            width:100%;
+        div.songs, div.albums, div.artists{
+            margin:15px 10px;
+            width:92%;
             overflow-y: hidden;
             overflow-x:scroll;
             display:flex;
+            position:relative;
         }
 
         ul.songs, ul.albums, ul.artists{
             display:flex;
             flex-direction:row;
             flex-wrap:nowrap;
+            border:none !important;
+            padding-left:66px;
 
         }
 
+        .linea{
+            display:none;
+        }
+
+        .songs li, .albums li, .artists li{
+            height:100%;
+            display:grid;
+            grid-template-columns:1fr;
+            grid-template-rows:1fr 0.5fr 0.4fr;
+        }
+
+        h5{
+            border-left:none;
+        }
+
+        h3.list-title{
+            box-sizing:border-box;
+            position:absolute;
+            z-index: 10;
+            transform:rotate(-90deg);
+            top:57px;
+            left:-115px;
+            padding:0px;
+        }
+
+        
   
-
-        div.listas{
-            width:100%;
-            padding:0px 6px;
-        }
-
          
 
 }
