@@ -155,6 +155,9 @@ div.genre-artists{
 h3.nombre.nombre-genre{
     font-size: 5vw;
 }
+h3.nombre.nombre-album{
+    font-size: 4vw;
+}
 
 /*tablet*/
     @media  (max-width: 768px){
@@ -234,6 +237,7 @@ h3.nombre.nombre-genre{
 
     div.container{
            height:1800px;
+           display: flex;
        }
     .detail{
         display: flex;
@@ -317,6 +321,10 @@ h3.nombre.nombre-genre{
     }
     span.datos{
         font-size: 40px;
+    }
+
+    h3.nombre.nombre-album{
+        font-size: 30px;
     }
 
     footer{
