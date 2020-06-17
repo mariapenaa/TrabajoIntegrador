@@ -379,7 +379,8 @@ h5{
   
 
         div.listas{
-            width:525px;
+            width:100%;
+            padding:0px 6px;
         }
 
          
