@@ -76,14 +76,6 @@ div{
     font-size: 70px;
 
 }
-/* carousel */
-[data-component="slideshow"] .slide {
-    display: none;
-  }
-
-  [data-component="slideshow"] .slide.active {
-    display: block;
-  }
 
 .title1{
     display:flex;
@@ -256,254 +248,140 @@ h5{
     padding:5px;
 }
 
+
 /*tablet*/
 @media (max-width: 768px){
- 
-   .banner{
-      
-       height:400px;
-   }
+.banner-img{
+    display:none
+}
 
-   .minibanner{
-      
-        height:300px;
-   }
+.minibanner{
+    grid-template-columns:1fr;
+    box-sizing: border-box;
+    display:flex;
+}
+.banner-title{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+}
+.banner-title .title1{
+    font-size:150px;
+}
 
-   .banner-title{
+.banner{
+    height:650px;
+}
+.title2{
+    font-size:120px;
+}
+
+.title3{
+    font-size:100px;
+    
+}
+
+/*LISTAA*/
+div.listas{
+    height:620px;
+}
+div.songs, div.albums, div.artists{
+    height:590px;
+}
+.list-title{
+    font-size:30px;
+}
+
+h4{
+    font-size:15px;
+}
+
+h5{
+    font-size:15px;
+}
+
+.listas li{
     display:grid;
-    grid-template-rows: 110px 80px 110px;
-    height:300px;
-    }
+    grid-template-columns:0.6fr 1fr 1fr;
+    height:60px;
+   
+}
 
-    .title1{
-    font-size:90px;
+
+}
+
+@media (max-width: 360px){
+   /*BANNER*/
+    .banner-title .title1{
+        font-size:40px;
     }
 
     .title2{
-    font-size:70px;
+        font-size:40px;
     }
-
+    
     .title3{
-    font-size:90px;
+        font-size:40px;   
     }
-
- 
-    .listas{
-        margin-top:50px;
-        height:500px;
-    }
-
-    div.songs, div.albums, div.artists{
-        height:550px;
-        width: 100%;
-    }
-
-    ul.songs, ul.albums, ul.artists{
-        border:none;
-        width: 100%;
-    }
-    
-    h3.list-title{
-        width:100%;
-    }
-
-    li.songs, li.albums, li.artists{
-        width:100%;
-        padding-right:10px;
-    }
-
-    h4{
-        font-size:30px;
-    }
-
-    h5{
-        font-size:20px;
-    }
-
-
-    
-}
-    @media (max-width: 360px){
-        /*banner*/
-        .banner{
-            display:none !important;
-        }
-
-        /* div.banner{
-            height:300px;
-            padding-left:30px;
-            padding-right:30px;
-        }
-
-
-        .minibanner{
-            height:200px;
-            display:flex;
-            flex-direction:row;
-            flex-wrap:nowrap;
-        }
-
-        .banner-title{
-            height:200px;
-            display:flex;
-            width:100%;
-        } */
-
-        /* div.title1, div.title3{
-            align-items:center;
-        }
-
-        div.title2{
-            font-size:80px;
-            margin-bottom:15px;
-        } */
-
-        /*PROBLEMA: imposible sacarle la medida, porque el 100% es igual al largo del interior de la lista*/
-        div.listas{
-            width:525px;
-      
-        }
-
-
-
+   
     div.banner{
-            height:350px;
-            padding-left:30px;
-            padding-right:30px;
-        }
-        
-        .banner-img{
-            display:none;
-        }
+        height:220px;
+        padding:10px 0px;
+        margin-bottom:0px;
 
-        .minibanner{
-           height:200px;
-           grid-template-columns:none;
-       }
+    }
 
-       .banner-title{
-        height:200px;
+    div.minibanner{
+        height:150px;
+    }
+
+    .banner-title{
+        height:150px;
         display:flex;
-        grid-template-columns:none;
-        grid-template-rows: none;
-        }
+        width:100%;
+        flex-direction:row;
+        flex-wrap:nowrap;
+    }
 
-        div.title1, div.title3{
-            align-items:center;
-        }
+    div.title1, div.title3{
+        align-items:center;
+    }
 
-        div.title2{
-            font-size:80px;
-            margin-bottom:15px;
-        } 
-
+    /*INTERIOR LISTAS*/
         /*listas*/
 
+        /*no se puede sacar esa medida de px*/
+       
+ 
         .listas{
             display:flex;
             flex-direction:column;
             flex-wrap:nowrap;
             height:800px;
             margin-bottom:20px;
-      
-        }
-        div.songs, div.albums, div.artists{
-            align-self: center;
-            height:500px;
-            box-sizing: border-box;
-            margin-bottom:40px;
-            position:relative;
-            display:flex;
-            flex-direction: row;
-            flex-wrap:nowrap;
             width:100%;
-            z-index:1;
-    
         }
 
-        .linea{
-            display:none;
-        }
-         .songs, .albums, .artists{
-             overflow-x:scroll;
-             overflow-y: hidden;
-         }
-    
-
-        /*interior listas
-        div.songs, div.albums, div.artists{
+        .songs, .albums, .artists{
+            width:100%;
+            overflow-y: hidden;
+            overflow-x:scroll;
             display:flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content:space-between;
-         
         }
 
-        .songs ul, .albums ul, .artists ul{
+        ul.songs, ul.albums, ul.artists{
             display:flex;
             flex-direction:row;
             flex-wrap:nowrap;
-            width:5000px;
-            height:500px;
-            z-index:2;
-            padding-left:50px;
-            margin:0px;
-            position:absolute;
-        }*/
-        
-        
 
-        .list-title{
-            display:flex;
-            flex-direction:row;
-            flex-wrap: wrap;
-            justify-content: center;
         }
 
-        h3.list-title{
-            width:223px;
-            box-sizing:border-box;
-            position:absolute;
-            z-index: 10;
-            transform:rotate(-90deg);
-            top:78px;
-            left:-79px;
+  
+
+        div.listas{
+            width:525px;
         }
 
-        .songs li, .albums li, .artists li{
-            display:grid;
-            grid-template-rows:1fr 0.5fr 0.5fr;
-            grid-template-columns:1fr;
-            width:200px;
-            border-right:dotted rgb(27, 3, 46);
-        }
+         
 
-   
-
-
-    
-        .songs a{
-           display: flex;
-        }
-        .albums a{
-            display: flex;
-         }
-         .artists a{
-             display: flex;
-         }
-        /*info de la lista*/
-        img.list-foto{
-            width:60%;
-        }
-       
- 
-
-    }
-
-
-
-
-
-
-
-   
+}
