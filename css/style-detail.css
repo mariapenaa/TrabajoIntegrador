@@ -48,6 +48,9 @@ font-size: 100px;
 h3.nombre {
 font-size: 7vw;
 }
+h3.nombre.nombre-artist{
+font-size: 5vw;
+}
 /*Datos album*/
  
 .info{
