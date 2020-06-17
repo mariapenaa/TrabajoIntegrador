@@ -139,10 +139,6 @@ div.songs{
     margin-top: 0px;
 }
 
-ul.songs{
-    margin-top:0px;
-    margin-bottom:0px;
-}
 
 
 /*albums*/
@@ -172,9 +168,9 @@ div.artists{
     margin-top:0px;
 }
 
-ul.artists, ul.albums, ul.tracks{
-    margin-top:0px;
-    margin-bottom:0px;
+ul.artists, ul.albums, ul.songs{
+   margin:0px !important;
+   width:100%;
 }
 
 /*Interior de la lista*/
@@ -247,6 +243,7 @@ h5{
     width:80%;
     padding:5px;
 }
+
 
 
 /*tablet*/
@@ -381,6 +378,8 @@ h5{
             flex-wrap:nowrap;
             border:none !important;
             padding-left:66px;
+            width:auto;
+            overflow-y: hidden;
 
         }
 
@@ -393,9 +392,19 @@ h5{
             display:grid;
             grid-template-columns:1fr;
             grid-template-rows:1fr 0.5fr 0.4fr;
+            border-right:dotted rgb(27, 3, 46);
+            border-width:1px;
+
         }
 
         h5{
+            padding:0px;
+            border-left:none;
+            font-size:10px;
+        }
+
+        .songs a{
+            font-size:10px;
             border-left:none;
         }
 
@@ -407,6 +416,10 @@ h5{
             top:57px;
             left:-115px;
             padding:0px;
+        }
+
+        img.list-foto{
+            padding:3px;
         }
 
         
