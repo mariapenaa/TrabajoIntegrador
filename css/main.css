@@ -183,6 +183,20 @@ header div {
 
 
 @media  (max-width: 768px){
+    .desktop-menu{
+        display:none;
+    }
+
+  
+
+    .burger-menu-mobile{
+        display:flex;
+        box-sizing: border-box;
+    }
+    button{
+        border:none !important;
+        width:50%;
+    }
     li .logo-img{
         margin-left:50px;
         margin-right:0px;

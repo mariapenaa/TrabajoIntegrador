@@ -12,8 +12,8 @@ body{
 }
 
 .foto1{
-    width:500px;
-    height:500px;
+    width:50%;
+    height:50%;
 }
 
 img.fotodetail{
@@ -46,7 +46,7 @@ font-size: 100px;
     width:100%;
 }
 h3.nombre {
-font-size: 50px;
+font-size: 7vw;
 }
 /*Datos album*/
  
@@ -66,7 +66,7 @@ font-size: 50px;
 }
 
 span.datos{
-    font-size:40px;
+    font-size:4vw;
     color:#D83F87;
 }
 
@@ -80,7 +80,7 @@ ul{
 .info-list li{
     margin:20px 0px 30px 0px;
     color:white;
-    font-size:30px;
+    font-size:3vw;
 }
 
 li.top-songs-title{
@@ -135,7 +135,7 @@ ol.topsongs{
 }
 .nameartists{
     width: 100%;
-    font-size: 20px;
+    font-size: 2vw;
     margin-left:30px;;
 }
 
@@ -152,7 +152,9 @@ div.genre-artists{
     border-width: 0.5px;
     border-color:rgb(129, 90, 180);
 }
-
+h3.nombre.nombre-genre{
+    font-size: 5vw;
+}
 
 /*tablet*/
     @media  (max-width: 768px){
@@ -189,8 +191,8 @@ div.genre-artists{
         
             } 
             .foto1{
-                width:350px;
-                height:350px;
+                width:50%;
+                height:50%;
         
             }
             .nombre{
@@ -249,7 +251,9 @@ div.genre-artists{
       
     }
     .foto1{
-        width: 500px;;
+        width: 100%;
+        height: 100%;
+       
     }
     .info{
         width: 100%;
@@ -286,10 +290,12 @@ div.genre-artists{
 
     h3.nombre{
         margin-top:10px;
+        font-size: 40px;
     }
    
    .info-list li{
        margin-bottom: 2px;
+       font-size: 20px;
    }
 
    ul.info-list{
@@ -309,9 +315,14 @@ div.genre-artists{
     li.top-songs-title{
         margin:10px;
     }
+    span.datos{
+        font-size: 40px;
+    }
 
     footer{
         top:117px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .datos li a{
