@@ -55,8 +55,7 @@ if (playlistStorage == null || playlistStorage == "[]") {
             +songTitle+'</span></a><span class="song-artist"><a href="detailsong.html?id='+artistID+'&type=artist">'+songArtist+'</a></span><span class="date-added">'
             +releaseDate+'</span><span class="duration">'+songDuration+'</span><span class="remove"><button class="remove-button"><i class="fas fa-times"></i></button></span></li>';
             
-            
-            
+             
             var iframeHTML = document.querySelector("#iframe-html");
             var iframeButton = document.querySelector("#iframeBoton");
            
