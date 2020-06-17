@@ -9,7 +9,7 @@ window.onload = function(){
         .then(function(resultado) {
             
                
-                   for(let i = 0; i< resultado.data.length; i++){
+                   for(let i = 1; i< resultado.data.length; i++){
 
                     var genreCard = document.querySelector(".genre");
                     var genreName = resultado.data[i].name;
@@ -22,6 +22,9 @@ window.onload = function(){
                     +"<p class='uk-margin-small-top'><a href='detailsong.html?id="+genreId+"&type=genre'>"+genreName+"</a></p></div>"; 
                   
                    }
+
+                   genreCard.innerHTML+="<div><div class='uk-card uk-card-default uk-card-body anchor'><a href='#genre-top' uk-totop uk-scroll></a></div></div>"
+             
 
                    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/"+genreId+"/artists")
                     .then(function(response) {
