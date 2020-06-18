@@ -235,23 +235,15 @@ h3.nombre.nombre-album{
     /* iphone */
     @media (max-width: 360px){
 
-    div.container.albumcontainer{
-        height:1400px;
-
-    }
-
-    div.container{
-           height:1800px;
-           display: flex;
-       }
+   
     .detail{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
     div.detail{
-        width: 500px;
-        height:950px;
+        width: 80%;
+        height:570px;
         align-items: center;
         margin-bottom: 10px;
     }
@@ -308,7 +300,8 @@ h3.nombre.nombre-album{
    }
 
    ul.info-list{
-       margin-bottom:100px;
+       margin-bottom:50px;
+       padding: 0px !important;
    }
 
    ol.topsongs li{
