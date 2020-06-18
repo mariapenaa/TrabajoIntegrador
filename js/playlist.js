@@ -77,17 +77,16 @@ if (playlistStorage == null || playlistStorage == "[]") {
             
         
 
-        //     var removeSong = document.querySelectorAll(".remove-button")
-        //     var array = [removeSong]
-        //   array.forEach(function(){
-        //       removeSong.addEventListener('click',function (e){
-        //       var indiceEnPlaylist = playlist.indexOf(idQuerySelector);
-        //       playlist.splice(indiceEnPlaylist,1)
-        //       console.log(playlist)
-        //       localStorage.setItem("playlist", JSON.stringify(playlist));
-        //       })
+            var removeSong = document.querySelectorAll(".remove-button")
+          removeSong.forEach(function(){
+              removeSong.addEventListener('click',function (e){
+              var indiceEnPlaylist = playlist.indexOf(idQuerySelector);
+              playlist.splice(indiceEnPlaylist,1)
+              console.log(playlist)
+              localStorage.setItem("playlist", JSON.stringify(playlist));
+              })
               
-        //   });
+          });
             
            
             
