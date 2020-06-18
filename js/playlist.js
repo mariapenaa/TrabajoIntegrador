@@ -56,7 +56,8 @@ if (playlistStorage == null || playlistStorage == "[]") {
             var seconds = duration - minutes * 60;
             var songDuration= minutes+":"+seconds;
             ///mira esta linea 58 como le pongo el onclick ademas, movi la funcion para afuera del fetch, si no la estabas creando CADA vez que ejecutabas este codigo.
-            songs.innerHTML+='<li class="list-items"><span class="play-icon-span"><button onclick="playSong(this.id)"  class="button-play" value="'+songTitle+'" id="'+id+'"><span class="overlay"><i class="fas fa-play play-icon"></i></span><img src="'+resultado.album.cover+'"></button></span><span class="songtitle"><a href="detailsong.html?id='+idQuerySelector+'&type=track">'
+            songs.innerHTML+='<li class="list-items"><span class="play-icon-span"><button onclick="playSong(this.id)"  class="button-play" value="'+songTitle+'" id="'+id+'">'
+            +'<span class="overlay"><i class="fas fa-play play-icon"></i></span><img src="'+resultado.album.cover+'"></button></span><span class="songtitle"><a href="detailsong.html?id='+idQuerySelector+'&type=track">'
             ///hasta aca
             +songTitle+'</span></a><span class="song-artist"><a href="detailsong.html?id='+artistID+'&type=artist">'+songArtist+'</a></span><span class="date-added">'
             +releaseDate+'</span><span class="duration">'+songDuration+'</span><span class="remove"><button class="remove-button"><i class="fas fa-times"></i></button></span></li>';
@@ -74,19 +75,7 @@ if (playlistStorage == null || playlistStorage == "[]") {
 
             /*HASTA ACA*/
             
-            //Martin: en el onclick, usar this.id 
-            //Lo que tenemos ahora: el iframe recibe el source con el id, pero del último elemento de la lista, sin importar si uno apreta o no el botón
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+         
             /*  var removeSong = document.querySelectorAll(".remove-button")
             removeSong.forEach(function(){
                 removeSong.addEventListener('click',function (e){
@@ -125,7 +114,7 @@ if (playlistStorage == null || playlistStorage == "[]") {
 function playSong(idCancion){
 
     var iframeHTML = document.querySelector("#iframe-html");
-    iframeHTML.src ='https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=70&height=70&color=007FEB&layout=dark&size=small&type=tracks&id='+idCancion+'&app_id=1'
-    debugger;
+    iframeHTML.src ='https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=70&height=70&color=007FEB&layout=dark&size=small&type=tracks&id='+idCancion+'&app_id=1&autoplay=1'
+    
     
 }
