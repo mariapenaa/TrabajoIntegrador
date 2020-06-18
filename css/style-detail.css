@@ -145,6 +145,7 @@ ol.topsongs{
 h2.nameartists{
     display:flex;
     align-items:center;
+    color: white;
 }
 
 .genre-artists-list li{
