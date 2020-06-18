@@ -118,12 +118,15 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
                       var genreArtistFoto = resultado.data[i].picture
                       var genreArtistName = document.querySelector(".genre-artists-list")
                       var artistId = resultado.data[i].id;
+                     
+  
+                      
                      genreArtistName.innerHTML+= "<li> <img class= 'fotoartists' src ='"+ genreArtistFoto + "' alt=foto artist><span></span><a href='detailsong.html?id="+artistId+"&type=artist'><h2 class='nameartists'>"+nombreArtista+"</h2></a></li>"
-                      }
-                   })
-                     console.log("Error: " + error);
-                  }
-        })
+                      }//cierra for
+                   })//cierra then
+                     
+            }//cierra if
+        })//cierra then 
           
              .catch(function(error) {
                console.log("Error: " + error);
