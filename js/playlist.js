@@ -55,25 +55,24 @@ if (playlistStorage == null || playlistStorage == "[]") {
             var minutes = Math.floor(duration / 60);
             var seconds = duration - minutes * 60;
             var songDuration= minutes+":"+seconds;
-            songs.innerHTML+='<li class="list-items"><span class="play-icon-span"><button class="button-play" value="'+songTitle+'" id="'+id+'"><span class="overlay"><i class="fas fa-play play-icon"></i></span><img src="'+resultado.album.cover+'"></button></span><span class="songtitle"><a href="detailsong.html?id='+idQuerySelector+'&type=track">'
+            ///mira esta linea 58 como le pongo el onclick ademas, movi la funcion para afuera del fetch, si no la estabas creando CADA vez que ejecutabas este codigo.
+            songs.innerHTML+='<li class="list-items"><span class="play-icon-span"><button onclick="playSong(this.id)"  class="button-play" value="'+songTitle+'" id="'+id+'"><span class="overlay"><i class="fas fa-play play-icon"></i></span><img src="'+resultado.album.cover+'"></button></span><span class="songtitle"><a href="detailsong.html?id='+idQuerySelector+'&type=track">'
+            ///hasta aca
             +songTitle+'</span></a><span class="song-artist"><a href="detailsong.html?id='+artistID+'&type=artist">'+songArtist+'</a></span><span class="date-added">'
             +releaseDate+'</span><span class="duration">'+songDuration+'</span><span class="remove"><button class="remove-button"><i class="fas fa-times"></i></button></span></li>';
             
-            
+          /*todo esto sobraba estaba raro lo de declarar una funcion adentro del fetch en todo caso se declara afuera y se la llama como termine haciendo */  
             
             //iframeButton.onclick = playSong(iframeButton.id)
             
             
-            var iframeHTML = document.querySelector("#iframe-html");
-            iframeButton = document.getElementById(id)
+            
+            //iframeButton = document.getElementById(id)
             
             
-            iframeButton.onclick = playSong(iframeButton)
+            //iframeButton.onclick = playSong(iframeButton)
 
-            function playSong(){
-                iframeHTML.src ='https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=70&height=70&color=007FEB&layout=dark&size=small&type=tracks&id='+this.id+'&app_id=1'
-    
-            }
+            /*HASTA ACA*/
             
             //Martin: en el onclick, usar this.id 
             //Lo que tenemos ahora: el iframe recibe el source con el id, pero del último elemento de la lista, sin importar si uno apreta o no el botón
@@ -119,5 +118,14 @@ if (playlistStorage == null || playlistStorage == "[]") {
     
     
     
+    
+}
+
+
+function playSong(idCancion){
+
+    var iframeHTML = document.querySelector("#iframe-html");
+    iframeHTML.src ='https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=70&height=70&color=007FEB&layout=dark&size=small&type=tracks&id='+idCancion+'&app_id=1'
+    debugger;
     
 }
