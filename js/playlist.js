@@ -43,6 +43,10 @@ if (playlistStorage == null || playlistStorage == "[]") {
             var duration = resultado.duration
             //var albumID = resultado.album.id
             var artistID = resultado.artist.id
+            var id = resultado.id
+
+
+        
      
        
             
@@ -51,18 +55,20 @@ if (playlistStorage == null || playlistStorage == "[]") {
             var minutes = Math.floor(duration / 60);
             var seconds = duration - minutes * 60;
             var songDuration= minutes+":"+seconds;
-            songs.innerHTML+='<li class="list-items"><span><button id="iframeBoton"><img src="'+resultado.album.cover+'"></button></span><span class="songtitle"><a href="detailsong.html?id='+idQuerySelector+'&type=track">'
+            songs.innerHTML+='<li class="list-items"><span><button value="'+songTitle+'" id="'+id+'"><img src="'+resultado.album.cover+'"></button></span><span class="songtitle"><a href="detailsong.html?id='+idQuerySelector+'&type=track">'
             +songTitle+'</span></a><span class="song-artist"><a href="detailsong.html?id='+artistID+'&type=artist">'+songArtist+'</a></span><span class="date-added">'
             +releaseDate+'</span><span class="duration">'+songDuration+'</span><span class="remove"><button class="remove-button"><i class="fas fa-times"></i></button></span></li>';
             
+
              
             var iframeHTML = document.querySelector("#iframe-html");
-            var iframeButton = document.querySelector("#iframeBoton");
-           
-            iframeButton.onclick = function(idQuerySelector){
-                iframeHTML.src ='https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=70&height=70&color=007FEB&layout=dark&size=small&type=tracks&id='+idQuerySelector+'&app_id=1'
-            }
+            iframeButton = document.getElementById(id)
             
+           
+            iframeButton.onclick = function(){
+                iframeHTML.src ='https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=70&height=70&color=007FEB&layout=dark&size=small&type=tracks&id='+this.id+'&app_id=1'
+            }
+           
            
 
 
