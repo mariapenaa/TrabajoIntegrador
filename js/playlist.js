@@ -1,7 +1,7 @@
 window.onload= function(){
 // titulo playlist
  var userTitle = document.querySelector(".playlistTitle")
-var username= localStorage.getItem("username")
+var username= localStorage.getItem("firstName")
 if (username != "" && username !=null) {
     userTitle.innerHTML += username+"'s Playlist"
     userTitle.style.textTransform = 'capitalize'

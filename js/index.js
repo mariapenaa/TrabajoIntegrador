@@ -1,13 +1,13 @@
 window.onload = function(){
   var userTitle = document.querySelector('.title1');
 
-     var username = localStorage.getItem("username")
+     var username = localStorage.getItem("firstName")
       
   if (username != "" && username !=null) {
  userTitle.innerHTML+= username+"'s"
   } else { 
-    var newUsername = prompt( 'Cual es tu usuario?');
-    localStorage.setItem("username", newUsername); 
+    // var newUsername = prompt( 'Cual es tu usuario?');
+    // localStorage.setItem("username", newUsername); 
     if (newUsername != "" && newUsername != null) {
       userTitle.innerHTML+= newUsername+"'s"
       

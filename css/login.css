@@ -2,7 +2,7 @@ body{
     background-position: center;
 }
 .login-page{
-    width:360px;
+    width:50%;
     padding:10% 0 0;
     margin:auto;
 }
@@ -34,26 +34,26 @@ li{
     box-sizing:border-box;
     font-size:14px;
 }
-.form button{
+.form input{
     font-family:"roboto", sans-serif;
     text-transform:uppercase;
     outline:0;
-    background:white;
+    background:rgb(196, 195, 195);
     padding:15px;
     color:black;
     font-size:14px;
     cursor:pointer;
 }
-.form button:hover, .form button:active{
+.form input:hover, .input button:active{
     background:pink;
 }
 .form .message{
     margin: 15px 0 0;
-    color:blue;
+    color:rgb(129, 90, 180);
     font-size:12px;
 }
 .form .message a{
-    color: pink;
+    color: #D83F87;
     text-decoration:none;
 }
 .form .register-form{
