@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>log in</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/login.js"></script>
+<body>
+    <div class="container">
+        <header>
+            <div class="desktop-menu">
+            <div class="logo">
+            <img class="logo-img" src="img/logo-img.png" alt="logo"></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="playlist.html">Playlists</a></li>
+                <!-- <li class="searchbar"><input type="text" placeholder="Search.."></li> -->
+            </ul>
+            <div class="uk-margin searchbar-flex">
+                <form class="uk-search uk-search-default" action="buscador.html" method="GET" >
+                    <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+                    <input class="uk-search-input" name="q" type="search" placeholder="Search songs...">
+                </form>
+            </div>
+        </div>
+          <div class="burger-menu-mobile">
+            <button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary"> <img class="logo-img" src="img/logo-img.png" alt="logo"></button>
+             <div class="uk-margin searchbar-flex">
+                <form class="uk-search uk-search-default" action="buscador.html" method="GET" >
+                    <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+                    <input class="uk-search-input" name="q" type="search" placeholder="Search songs...">
+                </form>
+            </div>
+            
+            <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+                <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+            
+                    <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                        <li class="uk-parent">
+                            <a href="index.html">Home</a>
+                            <a href="genres.html">Genres</a>
+                            <a href="playlist.html">Playlists</a>
+                        </li>
+                        
+                    </ul>
+            
+                </div>
+            </div>
+            
+          </div>
+        </header>
+    <div class="login-page">
+        <div class="form">
+            <img src="img/logo.white.png">
+            <form class= "register-form">
+                <input type="text" id="first-name" placeholder="First name...">
+                <input type="text" id="last-name" placeholder="Last name...">
+                <input type="text" id="username" placeholder="Username...">
+                <input type="password" id="pw" placeholder="password">
+                <input id="create-button" type="submit" value="register" onclick="store()">
+                <p class="message"> Already Registered? <a href="#">Login</a></p>
+            </form>
+            <form class="login-form">
+                <input type="text" id="user-username" placeholder="user name">
+                <input type="password" id="user-pw" placeholder="password">
+                <input id="login-button" type="submit" value="login" onclick="check()">
+                <p class="message">Not registered?<a href="#">Register</a></p>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <img class="deezer" src="img/deezerlogo.png" alt="logo deezer">
+        <ul id="icons">
+            <li><a href="https://www.instagram.com/deezer/"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/DeezerLatino"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://twitter.com/Deezer"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+        <ul class="nombres">
+            <li>Felicitas Rattagan</li>
+            <li>Maria Peña</li>
+        </ul>
+    </footer>
+    </div>
+
+</body>
+</html>
