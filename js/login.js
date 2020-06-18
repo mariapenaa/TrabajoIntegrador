@@ -34,7 +34,7 @@ function check(){
     var userPw = document.getElementById('user-pw');
     if(userName.value == storedName && userPw.value == storedPw){
         alert('You are logged in.');
-        window.location="../index.html"
+        window.location="index.html"
     }else if(userName.value==storedName && userPw.value != storedPw){
         alert('Wrong password');
     }else if(userPw.value==storedPw && userName.value != storedName){
