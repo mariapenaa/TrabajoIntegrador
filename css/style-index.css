@@ -290,11 +290,11 @@ div.songs, div.albums, div.artists{
 }
 
 h4{
-    font-size:15px;
+    font-size:2.5vw;
 }
 
 h5{
-    font-size:15px;
+    font-size:3vw;
 }
 
 .listas li{
@@ -400,7 +400,7 @@ h5{
         h5{
             padding:0px;
             border-left:none;
-            font-size:10px;
+            font-size: 3vw;;
         }
 
         .songs a{
@@ -421,9 +421,10 @@ h5{
         img.list-foto{
             padding:3px;
         }
-
-        
-  
+        h4{
+            font-size: 4vw;
+        }
+      
          
 
 }
