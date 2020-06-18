@@ -1,26 +1,29 @@
 .container{
     width: 100%;
 }
+ /* header */
 header ul{
     list-style: none;
 }
+ /* lo que busco */
 h1{
     text-align: left;
     color: white !important;
     font-family: 'Anton', sans-serif !important;
     font-size: 5vw !important;
 
+  }
+    .search-results{
+        font-size:40px;
+        margin:0px 10px;
+        color:grey;
+      }
 
 
-}
+/* spinner */
 #spinner{
   display: none;
 }
-.search-results{
-    font-size:40px;
-    margin:0px 10px;
-    color:grey;
-  }
 
 
   .user-search{
@@ -28,6 +31,7 @@ h1{
     width:100%;
     flex-direction: row nowrap;
   }
+  /* resultados */
   .results{
     display:flex;
     flex-direction:column;

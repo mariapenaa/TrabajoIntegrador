@@ -15,7 +15,6 @@
 
 iframe{
     border-radius:50%;
-  
 }
 .title{
     width: 100%;
@@ -25,7 +24,6 @@ iframe{
     align-items: center;
  
 }
-
 
 .title h3{
     padding:30px;
@@ -196,6 +194,8 @@ h5{
       padding:0px;
   }
   
+  /* media queries */
+  /* tablet */
 @media (max-width: 768px){
         .container{
             width:100%;
@@ -209,6 +209,7 @@ h5{
         }
 
 }
+/* iphone */
 @media  (max-width: 320px){
     div.playlist-img{
         display:none;

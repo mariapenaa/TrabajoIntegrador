@@ -1,4 +1,4 @@
-/*css*/
+
 body{
     margin:0px;
 }
@@ -31,19 +31,6 @@ div{
     box-sizing: border-box;
     margin:15px 20px 30px 20px;
 }
-/* 
-.buscador{
-    border:solid white;
-    width:100%;
-    height:50px;
-    background-color: #A4B3B6;
-} */
-
-/* .fa-search{
-    color:white;
-    font-size:30px;
-    margin:9px 15px;
-} */
 
 .minibanner{
     display:grid;
@@ -245,7 +232,7 @@ h5{
 }
 
 
-
+/* media queries */
 /*tablet*/
 @media (max-width: 768px){
 .banner-img{
@@ -278,7 +265,7 @@ h5{
     
 }
 
-/*LISTAA*/
+/*LISTAS*/
 div.listas{
     height:620px;
 }
@@ -306,7 +293,7 @@ h5{
 
 
 }
-
+/* iphone */
 @media (max-width: 360px){
    /*BANNER*/
     .banner-title .title1{

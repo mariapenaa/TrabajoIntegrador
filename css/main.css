@@ -1,4 +1,4 @@
-/*css*/
+
 *::-webkit-scrollbar {
     display: none;
   }
@@ -181,7 +181,8 @@ header div {
 }
 
 
-
+/* media queries */
+/* tablet */
 @media  (max-width: 768px){
     .desktop-menu{
         display:none;
@@ -229,7 +230,7 @@ header div {
 
 
 }
-
+/* iphone */
 @media  (max-width: 320px){
     /*Header*/
 

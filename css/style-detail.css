@@ -2,7 +2,6 @@ body{
     margin: 0px;
 }
 
-
 .container{
     display: flex;
     flex-wrap: wrap;
@@ -158,11 +157,13 @@ div.genre-artists{
 }
 h3.nombre.nombre-genre{
     font-size: 5vw;
-}
+} 
+/* albums */
 h3.nombre.nombre-album{
     font-size: 4vw;
 }
 
+ /* media queries */
 /*tablet*/
     @media  (max-width: 768px){
            

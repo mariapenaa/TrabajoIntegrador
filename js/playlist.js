@@ -96,16 +96,13 @@ if (playlistStorage == null || playlistStorage == "[]") {
                 console.log(error);
             })
             
-            
-            
+        
             
         };
         
         AgregarAPlaylist()
         
     }
-    
-    
     
     
 }
