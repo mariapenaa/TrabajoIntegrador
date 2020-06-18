@@ -55,60 +55,69 @@ if (playlistStorage == null || playlistStorage == "[]") {
             var minutes = Math.floor(duration / 60);
             var seconds = duration - minutes * 60;
             var songDuration= minutes+":"+seconds;
-            songs.innerHTML+='<li class="list-items"><span><button value="'+songTitle+'" id="'+id+'"><img src="'+resultado.album.cover+'"></button></span><span class="songtitle"><a href="detailsong.html?id='+idQuerySelector+'&type=track">'
+            songs.innerHTML+='<li class="list-items"><span class="play-icon-span"><button class="button-play" value="'+songTitle+'" id="'+id+'"><span class="overlay"><i class="fas fa-play play-icon"></i></span><img src="'+resultado.album.cover+'"></button></span><span class="songtitle"><a href="detailsong.html?id='+idQuerySelector+'&type=track">'
             +songTitle+'</span></a><span class="song-artist"><a href="detailsong.html?id='+artistID+'&type=artist">'+songArtist+'</a></span><span class="date-added">'
             +releaseDate+'</span><span class="duration">'+songDuration+'</span><span class="remove"><button class="remove-button"><i class="fas fa-times"></i></button></span></li>';
             
-
-             
+            
+            
+            //iframeButton.onclick = playSong(iframeButton.id)
+            
+            
             var iframeHTML = document.querySelector("#iframe-html");
             iframeButton = document.getElementById(id)
             
-           
-            iframeButton.onclick = function(){
+            
+            iframeButton.onclick = playSong(iframeButton)
+
+            function playSong(){
                 iframeHTML.src ='https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=70&height=70&color=007FEB&layout=dark&size=small&type=tracks&id='+this.id+'&app_id=1'
-            }
-           
-           
-
-
-            
-              
-            
-        
-
-            var removeSong = document.querySelectorAll(".remove-button")
-          removeSong.forEach(function(){
-              removeSong.addEventListener('click',function (e){
-              var indiceEnPlaylist = playlist.indexOf(idQuerySelector);
-              playlist.splice(indiceEnPlaylist,1)
-              console.log(playlist)
-              localStorage.setItem("playlist", JSON.stringify(playlist));
-              })
-              
-          });
-            
-           
-            
-            
-        })
-        
-        .catch(function(error){
-            console.log(error);
-        })
-
-        
-        
-        
-
-        
-    };
     
-    AgregarAPlaylist()
-   
-}
-
-
-
-
+            }
+            
+            //Martin: en el onclick, usar this.id 
+            //Lo que tenemos ahora: el iframe recibe el source con el id, pero del último elemento de la lista, sin importar si uno apreta o no el botón
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            /*  var removeSong = document.querySelectorAll(".remove-button")
+            removeSong.forEach(function(){
+                removeSong.addEventListener('click',function (e){
+                    var indiceEnPlaylist = playlist.indexOf(idQuerySelector);
+                    playlist.splice(indiceEnPlaylist,1)
+                    console.log(playlist)
+                    localStorage.setItem("playlist", JSON.stringify(playlist));
+                })
+                */
+               // });
+               
+               
+               
+               
+            })
+            
+            .catch(function(error){
+                console.log(error);
+            })
+            
+            
+            
+            
+        };
+        
+        AgregarAPlaylist()
+        
+    }
+    
+    
+    
+    
 }

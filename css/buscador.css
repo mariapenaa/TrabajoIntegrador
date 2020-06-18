@@ -8,7 +8,7 @@ h1{
     text-align: left;
     color: white !important;
     font-family: 'Anton', sans-serif !important;
-    font-size: 50px !important;
+    font-size: 8vw !important;
 
 
 
@@ -36,8 +36,11 @@ h1{
   }
 
   h2{
-    color:white;
+    color:#A4B3B6!important;
     text-align:left;
+    font-size:7vw !important;
+    font-family:'Oswald', sans-serif !important;
+    margin:20px 0px 0px 20px !important;
   }
 
   .track-results{

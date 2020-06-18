@@ -54,7 +54,7 @@ iframe{
     width:100%;
     padding:100px 20px 80px 20px;
     border-bottom:dotted #A4B3B6;
-    font-size:30px;
+    font-size:3vw;
     height:70px;
     background-color: rgb(27, 3, 46);
 }
@@ -94,7 +94,7 @@ div.songs{
     justify-content: left;
     padding:10px 20px;
     border-bottom:dotted #A4B3B6;
-    font-size:30px;
+    font-size:2vw;
 
 }
 .list-header{
@@ -102,6 +102,7 @@ div.songs{
     grid-template-columns: 0.5fr 1fr 1fr 0.6fr 0.4fr 0.3fr;
     grid-template-rows: 1fr;
     justify-content: left;
+    z-index: 30;
 
 }
 .remove{
@@ -113,8 +114,6 @@ h5{
     color: white !important;
 }
 .songs img{
-    width: 60px;
-    height:60px;
     border-radius:50%;
 }
 .duration{
@@ -138,7 +137,65 @@ h5{
     transition:0.3s;
 }
 
+/*button*/
+.button-play{
+    border-radius: 50%;
+    padding:0px;
+    height:auto;
+    width:90px;
+  
+}
 
+.button-play img{
+    width:100%;
+    object-fit:cover;
+    height:auto;
+}
+
+
+
+/*PLAY ICON*/
+
+
+.play-icon-span{
+    position:relative;
+    width:100%;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+
+  }
+
+.play-icon-span:hover .overlay {
+    opacity: 1;
+  }
+
+.play-icon {
+    color:#D83F87;
+
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  ul.songnames{
+      padding:0px;
+  }
+  
 @media (max-width: 768px){
         .container{
             width:100%;
@@ -162,17 +219,30 @@ h5{
     }
 
     .songs li{
-        font-size:25px;
+        font-size:10px;
         height:110px;
     }
 
-    .songs img{
-        width:100px;
-        height:100px;
+    li.list-items{
+        padding:5px 15px !important;
+        font-size:40px;
     }
 
-    .songs .list-items{
-        font-size:20px;
+    a, span.duration{
+        font-size:15px;
     }
+    
+    .button-play img{
+        width:100%;
+        object-fit:cover;
+        height:auto;
+    }
+
+    .button-play{
+        width:60px;
+        height:60px;
+    }
+
+   
 }
 
