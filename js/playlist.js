@@ -77,13 +77,36 @@ if (playlistStorage == null || playlistStorage == "[]") {
             
          
             var removeSong = document.querySelectorAll(".remove-button")
+            let playlistStorage = localStorage.getItem("playlist")
+            playlist= JSON.parse(playlistStorage)
+          
+            for (let i = 0; i < removeSong.length; i++) {
+                var indiceEnPlaylist = playlist.indexOf(idQuerySelector);
+                console.log(indiceEnPlaylist)
+                
+                removeSong[i].addEventListener('click',function(){
+
+                    playlist.splice(indiceEnPlaylist[i],1) 
+
+                })
+
+
+                
+            }
+
             
-            for (let i = 0; i < resultado.length; index++) {
+          /*   add.addEventListener('click',function(e){
+                console.log (playlist)
+                
+                if (playlist.includes(idQuerySelector)) {
+                  var indiceEnPlaylist = playlist.indexOf(idQuerySelector);
+
+
+            /* for (let i = 0; i < resultado.length; index++) {
                 var resultado = removeSong[i];
-                console.log(resultado)
-                element.addEventListener("click", function(){
-        
-                    var indiceEnPlaylist = playlist.indexOf(i);
+                
+                resultado.addEventListener("click", function(){
+                    
                     playlist.splice(indiceEnPlaylist,1)
                     console.log(indiceEnPlaylist)
                     localStorage.setItem("playlist", JSON.stringify(playlist));
@@ -92,7 +115,7 @@ if (playlistStorage == null || playlistStorage == "[]") {
         
         
                 })
-            }
+            } */
             
             
             
