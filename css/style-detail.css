@@ -105,7 +105,7 @@ ol.topsongs{
     border-radius:7px;
     padding:7px 20px;
     font-family:'Oswald', sans-serif;
-    font-size:15px;
+    font-size:10px;
 
 }
 iframe{
@@ -262,6 +262,11 @@ h3.nombre.nombre-album{
         flex-wrap: wrap;
         flex-direction: column;
     }
+
+    .info-songs div.detail{
+        height:680px;
+
+    }
     div.detail{
         width: 80%;
         height:570px;
@@ -301,18 +306,25 @@ h3.nombre.nombre-album{
         width:70px;
         height:70px;
     }
+    .info-songs {
+        height:400px;
+
+    }
     div.info {
         margin-top: 0px;
         text-align: center;
     }
 
+    
+
     div.info.genre{
         margin-top:150px;
+    
     }
 
     h3.nombre{
         margin-top:10px;
-        font-size: 40px;
+        font-size: 32px;
     }
 
     h2.nameartists{

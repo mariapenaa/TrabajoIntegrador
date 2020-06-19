@@ -23,16 +23,28 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         var trackAlbum = resultado.album.title;
         var trackDate = resultado.album.release_date;
         var trackCover = resultado.album.cover_big;
+        var artistName = resultado.artist.name;
+        var trackDuration = resultado.duration;
         var docNombreCancion = document.querySelector(".nombre");
         var docNombreAlbum = document.querySelector (".album-name");
         var docFechaAlbum = document.querySelector (".album-date");
         var docFotoAlbum = document.querySelector (".foto1");
         var docPlaysong = document.querySelector(".play-song")
+        var docArtist = document.querySelector(".artist-name")
+        var docDuration = document.querySelector(".duration")
+
+        var minutes = Math.floor(trackDuration / 60);
+        var seconds = trackDuration - minutes * 60;
+        var songDuration= minutes+":"+seconds;
+
         var cancionIframe = resultado.id
         var idAlbum = resultado.album.id;
         docNombreCancion.innerHTML+=trackTitle;
         docNombreAlbum.innerHTML += "<a href='detailsong.html?id="+ idAlbum+"&type=album'>"+ trackAlbum+"</a>"
         docFechaAlbum.innerHTML += trackDate;
+        docArtist.innerHTML+=artistName;
+        docDuration.innerHTML+=songDuration;
+        
         docPlaysong.innerHTML+='<span><iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=50&height=50&color=007FEB&layout=dark&size=medium&type=tracks&id='+cancionIframe+'&app_id=1" width="50" height="50"></iframe></span>'
         docFotoAlbum.innerHTML += "<img class= 'fotodetail' src='"+trackCover+" ' alt='albumcover'>"
        console.log(cancionIframe)

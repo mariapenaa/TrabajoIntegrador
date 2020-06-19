@@ -76,29 +76,56 @@ if (playlistStorage == null || playlistStorage == "[]") {
             /*HASTA ACA*/
             
          
-            /*  var removeSong = document.querySelectorAll(".remove-button")
-            removeSong.forEach(function(){
-                removeSong.addEventListener('click',function (e){
-                    var indiceEnPlaylist = playlist.indexOf(idQuerySelector);
-                    playlist.splice(indiceEnPlaylist,1)
-                    console.log(playlist)
-                    localStorage.setItem("playlist", JSON.stringify(playlist));
-                })
-                */
-               // });
-               
-               
-               
-               
-            })
+            var removeSong = document.querySelectorAll(".remove-button")
             
-            .catch(function(error){
-                console.log(error);
-            })
-            
+            for (let i = 0; i < resultado.length; index++) {
+                var resultado = removeSong[i];
+                console.log(resultado)
+                element.addEventListener("click", function(){
         
+                    var indiceEnPlaylist = playlist.indexOf(i);
+                    playlist.splice(indiceEnPlaylist,1)
+                    console.log(indiceEnPlaylist)
+                    localStorage.setItem("playlist", JSON.stringify(playlist));
+                    
+        
+        
+        
+                })
+            }
             
-        };
+            
+            
+            /*   for (let i = 0; i < removeSong.length; i++) {
+                const element = removeSong[i];
+                console.log(element)
+                function remove (idQuerySelector){
+                }
+                
+            } */
+            /*  removeSong.forEach(function remove(){
+                removeSong.addEventListener('click',function (e){
+                    console.log(removeSong)
+                    var indiceEnPlaylist = playlist.indexOf(idQuerySelector);
+                    console.log(playlist)
+                })
+                
+            });
+            
+            remove() */
+            
+            
+            
+            
+        })
+        
+        .catch(function(error){
+            console.log(error);
+        })
+        
+        
+        
+    };
         
         AgregarAPlaylist()
         
