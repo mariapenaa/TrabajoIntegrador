@@ -241,7 +241,9 @@ h3.nombre.nombre-album{
             footer ul{
                 margin-right: 10px;
             }
-        
+            .img-fotodetail{
+                width: 100%;
+            }
         }
         
         

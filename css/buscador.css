@@ -89,5 +89,13 @@ h1{
   .img-div{
     width:150px;
   }
- 
-/* faltan media queries */
+  /* media query tablet */
+  @media  (max-width: 768px){
+    .img-div{
+      Width: 90px}
+  }
+  /* media query iphone */
+  @media (max-width: 360px){
+    .img-div{
+    Width: 60px}
+  }
