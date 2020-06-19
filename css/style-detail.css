@@ -108,7 +108,11 @@ ol.topsongs{
     font-size:15px;
 
 }
-
+iframe{
+    width:50px;
+    
+    border-radius: 50%;
+}
 /*genre*/
 .genre-artists{
     border:solid white;
