@@ -100,9 +100,12 @@ ol.topsongs{
 
 
 .datos-add{
-    background-color:#A4B3B6;
+    background-color:rgb(129, 90, 180);
+    color:white;
     border-radius:7px;
     padding:7px 20px;
+    font-family:'Oswald', sans-serif;
+    font-size:15px;
 
 }
 
@@ -115,12 +118,25 @@ ol.topsongs{
     margin:30px;
 
 }
-
+ul.genre-artists-list{
+    padding:0px !important;
+}
 .genre-artists-list ul{
     font-size:5px;
     display: flex;
     flex-wrap: nowrap;
      width: 50%; 
+   
+}
+
+h2.nameartists {
+    margin:0px;
+}
+
+.genre-artists-list a{
+    margin-left:5px;
+
+    align-self: center;
 }
 
 .genre-artists-list li{
@@ -188,7 +204,6 @@ h3.nombre.nombre-album{
             }
             
             div.genre-artists{
-                width:300px;
                 height:130px;
                 margin: 0px 0px 0px 20px;
             }
@@ -292,6 +307,10 @@ h3.nombre.nombre-album{
     h3.nombre{
         margin-top:10px;
         font-size: 40px;
+    }
+
+    h2.nameartists{
+        font-size:10px;
     }
    
    .info-list li{

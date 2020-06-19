@@ -243,11 +243,13 @@ h5{
     grid-template-columns:1fr;
     box-sizing: border-box;
     display:flex;
+    border:none;
 }
 .banner-title{
     display:flex;
     flex-direction:column;
     flex-wrap:nowrap;
+
 }
 .banner-title .title1{
     font-size:150px;
@@ -277,11 +279,11 @@ div.songs, div.albums, div.artists{
 }
 
 h4{
-    font-size:2.5vw;
+    font-size:2vw;
 }
 
 h5{
-    font-size:3vw;
+    font-size:2vw;
 }
 
 .listas li{
@@ -289,6 +291,11 @@ h5{
     grid-template-columns:0.6fr 1fr 1fr;
     height:60px;
    
+}
+
+.songs li, .albums li, .artists li{
+    min-width: 67px;
+    text-align:center
 }
 
 
@@ -400,8 +407,8 @@ h5{
             position:absolute;
             z-index: 10;
             transform:rotate(-90deg);
-            top:57px;
-            left:-115px;
+            top:32%;
+            left:-40%;
             padding:0px;
         }
 

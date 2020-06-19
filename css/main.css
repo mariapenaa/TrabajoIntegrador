@@ -180,6 +180,9 @@ header div {
     width:100% !important;
 }
 
+.nombres li{
+    padding-left:20px;
+}
 
 /* media queries */
 /* tablet */
@@ -220,10 +223,13 @@ header div {
          padding-right:100px;
      }
 
-     img.logo-img{
-         margin:10px;
+     ul.info-list{
+         padding-left:0px !important;
      }
-
+     /* img.logo-img{
+        
+     }
+ */
  
 
 

@@ -17,8 +17,8 @@ window.onload = function(){
                     var genreId = resultado.data[i].id;
                    
                     genreCard.innerHTML+="<div class='genre-card-single'><div class='uk-text-center uk-card uk-card-default uk-card-body genre-div uk-cover-container'>"
-                    +" <div class='uk-inline-clip uk-transition-toggle' tabindex='0'><img src='"+genreFoto+"' alt='genre foto' uk-cover>"
-                    +"<img class='imagenArtista uk-transition-scale-up uk-position-cover'  alt='otra foto' uk-cover src=' '></div>"
+                    +" <a href='detailsong.html?id="+genreId+"&type=genre'><div class='uk-inline-clip uk-transition-toggle' tabindex='0'><img src='"+genreFoto+"' alt='genre foto' uk-cover>"
+                    +"<img class='imagenArtista uk-transition-scale-up uk-position-cover'  alt='otra foto' uk-cover src=' '></div></a>"
                     +"<p class='uk-margin-small-top'><a href='detailsong.html?id="+genreId+"&type=genre'>"+genreName+"</a></p></div>"; 
                   
                    }

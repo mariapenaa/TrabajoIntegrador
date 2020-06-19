@@ -34,7 +34,7 @@ li{
     box-sizing:border-box;
     font-size:14px;
 }
-.form input{
+#create-button, #login-button{
     font-family:"roboto", sans-serif;
     text-transform:uppercase;
     outline:0;
@@ -43,6 +43,7 @@ li{
     color:black;
     font-size:14px;
     cursor:pointer;
+    color:rgb(129, 90, 180);
 }
 .form input:hover, .input button:active{
     background:pink;
@@ -58,4 +59,14 @@ li{
 }
 .form .register-form{
     display:none;
+}
+
+@media  (max-width: 320px){
+.form input{
+    font-size:7px;
+}
+
+.login-page{
+    padding:32% 0 0;
+}
 }
