@@ -15,7 +15,7 @@ var playlist = JSON.parse(playlistStorage);
 var songs = document.querySelector(".songnames");
 
 //var docplayCancion = document.querySelector(".iframe");
-//var doctituloCancion = document.querySelector(".songtitle");
+var doctituloCancion = document.querySelector(".songtitle");
 /*var docartistaCancion = document.querySelector(".song-artist");
 var docfechaCreada = document.querySelector(".date-added");
 var docduracion = document.querySelector(".duration"); */

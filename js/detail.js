@@ -32,6 +32,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         var docPlaysong = document.querySelector(".play-song")
         var docArtist = document.querySelector(".artist-name")
         var docDuration = document.querySelector(".duration")
+        var artistId = resultado.artist.id
 
         var minutes = Math.floor(trackDuration / 60);
         var seconds = trackDuration - minutes * 60;
@@ -42,7 +43,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/+"+typeQuerySe
         docNombreCancion.innerHTML+=trackTitle;
         docNombreAlbum.innerHTML += "<a href='detailsong.html?id="+ idAlbum+"&type=album'>"+ trackAlbum+"</a>"
         docFechaAlbum.innerHTML += trackDate;
-        docArtist.innerHTML+=artistName;
+        docArtist.innerHTML+="<a href='detailsong.html?id="+artistId+"&type=artist'>"+artistName+"</a>";
         docDuration.innerHTML+=songDuration;
         
         docPlaysong.innerHTML+='<span><iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=50&height=50&color=007FEB&layout=dark&size=medium&type=tracks&id='+cancionIframe+'&app_id=1" width="50" height="50"></iframe></span>'
