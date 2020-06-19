@@ -82,14 +82,20 @@ if (playlistStorage == null || playlistStorage == "[]") {
           
             for (let i = 0; i < removeSong.length; i++) {
                 var indiceEnPlaylist = playlist.indexOf(idQuerySelector);
-                console.log(indiceEnPlaylist)
+
                 
                 removeSong[i].addEventListener('click',function(){
+                   for (let i = 0; i < indiceEnPlaylist.length; i++) {
+                       const element = indiceEnPlaylist[i];
+                       console.log(element)
+                       if(element == idQuerySelector){
+                           playlist.splice(i,1) 
 
-                    playlist.splice(indiceEnPlaylist[i],1) 
+                       }
+                   }
 
                 })
-
+                localStorage.setItem("playlist", JSON.stringify(playlist));
 
                 
             }
